@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import createStore from './createStore'
 import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
-import 'bootstrap/dist/css/bootstrap.min.css'
 
 const store = createStore()
 

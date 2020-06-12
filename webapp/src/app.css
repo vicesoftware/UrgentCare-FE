@@ -1,3 +1,356 @@
 .page {
 	margin-top: 20px;
 }
+
+@font-face {
+	font-family: 'Stolzl';
+	src: url('./assets/fonts/stolzl/Stolzl-Light.eot');
+	src: url('./assets/fonts/stolzl/Stolzl-Light.eot?#iefix')
+			format('embedded-opentype'),
+		url('./assets/fonts/stolzl/Stolzl-Light.woff2') format('woff2'),
+		url('./assets/fonts/stolzl/Stolzl-Light.woff') format('woff'),
+		url('./assets/fonts/stolzl/Stolzl-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Stolzl';
+	src: url('./assets/fonts/stolzl/Stolzl-Thin.eot');
+	src: url('./assets/fonts/stolzl/Stolzl-Thin.eot?#iefix')
+			format('embedded-opentype'),
+		url('./assets/fonts/stolzl/Stolzl-Thin.woff2') format('woff2'),
+		url('./assets/fonts/stolzl/Stolzl-Thin.woff') format('woff'),
+		url('./assets/fonts/stolzl/Stolzl-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Stolzl Book';
+	src: url('./assets/fonts/stolzl/Stolzl-Book.eot');
+	src: url('./assets/fonts/stolzl/Stolzl-Book.eot?#iefix')
+			format('embedded-opentype'),
+		url('./assets/fonts/stolzl/Stolzl-Book.woff2') format('woff2'),
+		url('./assets/fonts/stolzl/Stolzl-Book.woff') format('woff'),
+		url('./assets/fonts/stolzl/Stolzl-Book.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Stolzl';
+	src: url('./assets/fonts/stolzl/Stolzl-Regular.eot');
+	src: url('./assets/fonts/stolzl/Stolzl-Regular.eot?#iefix')
+			format('embedded-opentype'),
+		url('./assets/fonts/stolzl/Stolzl-Regular.woff2') format('woff2'),
+		url('./assets/fonts/stolzl/Stolzl-Regular.woff') format('woff'),
+		url('./assets/fonts/stolzl/Stolzl-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Stolzl';
+	src: url('./assets/fonts/stolzl/Stolzl-Bold.eot');
+	src: url('./assets/fonts/stolzl/Stolzl-Bold.eot?#iefix')
+			format('embedded-opentype'),
+		url('./assets/fonts/stolzl/Stolzl-Bold.woff2') format('woff2'),
+		url('./assets/fonts/stolzl/Stolzl-Bold.woff') format('woff'),
+		url('./assets/fonts/stolzl/Stolzl-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Stolzl';
+	src: url('./assets/fonts/stolzl/Stolzl-Medium.eot');
+	src: url('./assets/fonts/stolzl/Stolzl-Medium.eot?#iefix')
+			format('embedded-opentype'),
+		url('./assets/fonts/stolzl/Stolzl-Medium.woff2') format('woff2'),
+		url('./assets/fonts/stolzl/Stolzl-Medium.woff') format('woff'),
+		url('./assets/fonts/stolzl/Stolzl-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+body {
+	font-family: 'Stolzl';
+	color: #4c4c4c;
+}
+a {
+	color: #294c6a;
+}
+.bg-light {
+	background-color: #f6f6fc !important;
+}
+.bg-primary {
+	background-color: #428ec2 !important;
+}
+.text-primary {
+	color: #428ec2 !important;
+}
+.text-success {
+	color: #6bb645 !important;
+}
+.text-danger {
+	color: #ea496a !important;
+}
+.min-vh-100 {
+	min-height: 100vh;
+}
+
+.f-10 {
+	font-size: 10px;
+}
+.f-12 {
+	font-size: 12px !important;
+}
+.f-14 {
+	font-size: 14px !important;
+}
+.f-15 {
+	font-size: 15px !important;
+}
+.f-16 {
+	font-size: 16px !important;
+}
+.f-18 {
+	font-size: 18px !important;
+}
+.f-22 {
+	font-size: 22px !important;
+}
+.f-24 {
+	font-size: 24px !important;
+}
+.f-28 {
+	font-size: 28px !important; /* H3 tag  */
+}
+.f-32 {
+	font-size: 32px !important; /* H2 tag  */
+}
+
+.lh-25 {
+	line-height: 25px;
+}
+.lh-30 {
+	line-height: 30px;
+}
+.lh-40 {
+	line-height: 40px;
+}
+.lh-45 {
+	line-height: 45px;
+}
+.mr-30 {
+	margin-right: 30px !important;
+}
+.ml-30 {
+	margin-left: 30px !important;
+}
+.mb-10 {
+	margin-bottom: 10px !important;
+}
+.mb-15 {
+	margin-bottom: 15px !important;
+}
+.mb-20 {
+	margin-bottom: 20px !important;
+}
+.mb-25 {
+	margin-bottom: 25px !important;
+}
+.mb-30 {
+	margin-bottom: 25px !important;
+}
+.mb-50 {
+	margin-bottom: 50px !important;
+}
+.p-15 {
+	padding: 15px !important;
+}
+.p-20 {
+	padding: 20px !important;
+}
+.p-25 {
+	padding: 25px !important;
+}
+.py-25 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important;
+}
+.pt-25 {
+	padding-top: 25px !important;
+}
+.pb-25 {
+	padding-bottom: 25px !important;
+}
+.p-30 {
+	padding: 30px !important;
+}
+.py-30 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important;
+}
+
+.opacity-75 {
+	opacity: 0.75;
+}
+.opacity-50 {
+	opacity: 0.5;
+}
+.opacity-0 {
+	opacity: 0;
+}
+.container-sm {
+	max-width: 690px;
+	margin: 0 auto;
+}
+.font-semi-bold {
+	font-weight: 500 !important;
+}
+.spacer {
+	height: 50px;
+}
+
+/*###############-------Form  css Start------###################*/
+.form-group {
+	margin-bottom: 15px;
+}
+.form-control {
+	height: 40px;
+	border: 1px solid #47545e;
+	font-size: 12px;
+	font-weight: 600;
+	border-radius: 4px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.form-control:focus {
+	border-color: inherit;
+	box-shadow: none;
+}
+.form-control-md {
+	height: 36.5px;
+}
+select.form-control {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-image: url(./assets/icons/arrowDown.svg);
+	background-repeat: no-repeat;
+	background-size: 20px;
+	background-position: center right 15px;
+	padding-right: 38px;
+}
+.calender-input {
+	background-image: url(./assets/icons/calendar.svg);
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: center right 15px;
+	padding-right: 30px;
+}
+.search-control {
+	background-image: url(./assets/icons/search.svg);
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: center left 15px;
+	padding-left: 55px;
+}
+/*###############-------Form  css End------###################*/
+
+/*###############-------Btn  css Start------###################*/
+.btn {
+	height: 40px;
+	min-width: 150px;
+	font-size: 12px;
+	font-weight: normal;
+	border-radius: 4px;
+	border-width: 1px;
+	line-height: 1.2;
+}
+.btn:focus {
+	box-shadow: none !important;
+}
+.btn-lg {
+	min-width: 200px !important;
+}
+.btn-sm {
+	min-width: 133px !important;
+	height: 30px;
+	line-height: 10px;
+}
+.btn-md {
+	height: 36px;
+}
+.btn-small {
+	min-width: 100px !important;
+}
+.btn-block {
+	min-width: 100%;
+}
+
+.btn-primary,
+.btn-primary:focus,
+.btn-primary:active {
+	background-color: #428ec2;
+	border-color: #428ec2;
+}
+.btn-primary:hover {
+	background-color: #287fbb;
+	border-color: #277fbb;
+}
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+	background-color: #428ec2;
+	border-color: #428ec2;
+}
+.btn-secondary,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary:not(:disabled):not(.disabled):active {
+	background-color: #248ec2;
+	border-color: #248ec2;
+}
+.btn-secondary:hover {
+	background-color: #0a84bf;
+	border-color: #0a84bf;
+}
+.btn-outline-danger {
+	color: #c72127;
+	border-color: #c72127;
+}
+.btn-outline-success {
+	color: #8dc63f;
+	border-color: #8dc63f;
+}
+.btn-warning,
+.btn-warning:not(:disabled):not(.disabled):active {
+	color: #ffffff;
+	background-color: #f7941e;
+	border-color: #f7941e;
+}
+.btn-warning:hover {
+	color: #ffffff;
+	background-color: #e67d00;
+	border-color: #e67d1e;
+}
+.btn-outline-warning {
+	color: #f79423;
+	border-color: #f79423;
+}
+.btn-outline-warning:hover {
+	color: #ffffff;
+	background-color: #f79423;
+	border-color: #f79423;
+}
+.btn-light {
+	color: #212529;
+	background-color: #f6f6fc;
+	border-color: #f6f6fc;
+}
+.btn-link {
+	color: #294c6a;
+}
+/*###############-------Btn  css End------###################*/

@@ -1,0 +1,27 @@
+.navbar-brand {
+	padding-left: 18.5px;
+	padding-right: 18.5px;
+}
+.navbar-nav .nav-item > .nav-link {
+	line-height: 75px;
+	position: relative;
+	padding: 0px 15px;
+	font-size: 14px;
+	color: #4c4c4c;
+	font-weight: bold;
+}
+
+.navbar-nav .nav-item > .btn {
+	min-width: 160px;
+}
+
+@media (max-width: 767.98px) {
+	.navbar-expand-md > .container,
+	.navbar-expand-md > .container-fluid {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.navbar-nav .nav-item > .nav-link {
+		padding: 0px !important;
+	}
+}
