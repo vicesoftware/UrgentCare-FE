@@ -1,12 +1,12 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Page from './widgets/Page/Page'
-import Home from './features/Home'
+import VisitsArchive from './features/VisitsArchive'
 export default function Routes() {
 	return (
 		<Switch>
 			<PageRoute path='/'>
-				<Home />
+				<VisitsArchive />
 			</PageRoute>
 		</Switch>
 	)

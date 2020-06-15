@@ -1,5 +1,5 @@
 .page {
-	margin-top: 20px;
+	padding-top: 25px;
 }
 
 @font-face {
@@ -349,6 +349,11 @@ select.form-control {
 	color: #212529;
 	background-color: #f6f6fc;
 	border-color: #f6f6fc;
+}
+.btn-light:hover {
+	color: #212529;
+	background-color: #e2e6ea;
+	border-color: #dae0e0;
 }
 .btn-link {
 	color: #294c6a;
