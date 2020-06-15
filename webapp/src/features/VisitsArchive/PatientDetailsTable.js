@@ -35,6 +35,7 @@ export default function PatientDetailsTable() {
 			visitReason: 'Nausea',
 		},
 	]
+
 	const completeButton = () => (
 		<Button size='md' variant='outline-success f-14 font-weight-bold'>
 			Complete
