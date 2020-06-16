@@ -13,15 +13,3 @@
 	background-position: center right 15px;
 	padding-right: 30px;
 }
-
-/* .btn-light {
-	color: #212529;
-	background-color: #f6f6fc;
-	border-color: #f6f6fc;
-} */
-
-.btn-light:hover {
-	color: #212529;
-	background-color: #e2e6ea;
-	border-color: #dae0e0;
-}
