@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from 'react-bootstrap'
 import Table from '../../widgets/Table'
 
-export default function PatientDetailsTable() {
+const PatientDetailsTable = () => {
 	const mockDetails = [
 		{
 			patientName: 'Cody Miles',
@@ -85,3 +85,5 @@ export default function PatientDetailsTable() {
 		</div>
 	)
 }
+
+export default PatientDetailsTable
