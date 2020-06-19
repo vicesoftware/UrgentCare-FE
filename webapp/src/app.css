@@ -80,6 +80,10 @@ body {
 a {
 	color: #294c6a;
 }
+.my-25 {
+	margin-bottom: 25px !important;
+	margin-top: 25px !important;
+}
 .bg-light {
 	background-color: #f6f6fc !important;
 }
@@ -95,6 +99,10 @@ a {
 .text-danger {
 	color: #ea496a !important;
 }
+.text-light {
+	color: rgba(76, 76, 76, 0.5) !important;
+}
+
 .min-vh-100 {
 	min-height: 100vh;
 }
@@ -359,3 +367,8 @@ select.form-control {
 	color: #294c6a;
 }
 /*###############-------Btn  css End------###################*/
+
+.status-sign {
+	height: 10px;
+	width: 10px;
+}

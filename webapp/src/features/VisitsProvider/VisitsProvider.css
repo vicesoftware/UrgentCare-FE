@@ -1,0 +1,7 @@
+.list-group-item {
+	display: flex !important;
+}
+
+/* .btn-expand:not(.collapsed) img {
+	transform: rotate(180deg);
+} */
