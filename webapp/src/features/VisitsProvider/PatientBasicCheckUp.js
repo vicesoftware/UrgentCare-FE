@@ -43,6 +43,7 @@ const PatientBasicCheckUp = () => {
 			value: 120 / 80,
 		},
 	]
+
 	return (
 		<Card className='shadow-sm border-0 mb-30'>
 			<Card.Body className='p-20'>
