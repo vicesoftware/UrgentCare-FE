@@ -82,11 +82,6 @@ const ProviderCards = () => {
 									{each.statusBtnText}
 								</Button>
 							</Col>
-							{/* <Col md={6}>
-								{/* <div className='d-flex align-items-center'> */}
-
-							{/* </div> */}
-							{/* </Col> */}
 
 							<Accordion.Toggle
 								className='btn-expand f-14 btn btn-link btn-auto p-0 font-weight-bold d-flex align-items-center text-light'
@@ -149,6 +144,11 @@ const ProviderCards = () => {
 											)}
 
 											<Button
+												className={
+													each.actionBtnText === 'Edit now'
+														? 'btn-primary-custom'
+														: ''
+												}
 												variant={
 													each.actionBtnText === 'Save'
 														? 'warning'
