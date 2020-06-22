@@ -11,7 +11,7 @@ const RequestVisitModal = ({ onClose }) => {
 
 	const footer = (
 		<>
-			<Button className=' btn-lg' variant='primary'>
+			<Button className='btn-lg btn-primary-custom' variant='primary'>
 				Next
 			</Button>
 			<Button className='btn-small' variant='light' onClick={onClose}>

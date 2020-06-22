@@ -1,27 +1,35 @@
 import React from 'react'
-import { Col, Card, ListGroup, Button } from 'react-bootstrap'
+import { Col, Card, ListGroup } from 'react-bootstrap'
 
-const PatientBasicCheckUp = () => {
+const PatientBasicCheckUp = ({ Edit }) => {
 	const mockPatientData = [
 		{
 			title: 'Date of Birth',
 			descripition: 'April 5, 1988',
 		},
 		{
-			title: 'Biological Sex',
+			title: 'Birth Sex',
 			descripition: 'Male',
 		},
 		{
-			title: 'Height',
-			descripition: '5’ 9”',
+			title: 'Allergies',
+			descripition: 'Peanuts Seasonal',
 		},
 		{
-			title: 'Weight',
-			descripition: '170 lbs',
+			title: 'Known Medications',
+			descripition: 'Flonase',
+		},
+		{
+			title: 'Known Conditions',
+			descripition: 'N/A',
 		},
 		{
 			title: 'Reason for Visit',
 			descripition: 'Nausea',
+		},
+		{
+			title: 'Additional Notes',
+			descripition: 'N/A',
 		},
 	]
 
@@ -31,8 +39,16 @@ const PatientBasicCheckUp = () => {
 			value: 98.5 + 'F',
 		},
 		{
+			vitalSign: 'Weight',
+			value: 145 + 'LBS/' + 65.7 + 'KG',
+		},
+		{
 			vitalSign: 'Pulse rate',
 			value: 70 + 'BPM',
+		},
+		{
+			vitalSign: 'Pulse OX',
+			value: 95 + '%',
 		},
 		{
 			vitalSign: 'Respiration Rate',
@@ -47,9 +63,12 @@ const PatientBasicCheckUp = () => {
 	return (
 		<Card className='shadow-sm border-0 mb-30'>
 			<Card.Body className='p-20'>
-				<Card.Title className='font-weight-bold gotham lh-25 d-block mb-10 f-18'>
-					Cody Miles
-				</Card.Title>
+				<div className='d-flex align-items-center mb-10'>
+					<Card.Title className='font-weight-bold gotham lh-25 d-block mb-10 f-18'>
+						Cody Miles
+					</Card.Title>
+					{Edit}
+				</div>
 				<ListGroup variant='flush' as='ul' className='mb-30'>
 					{mockPatientData.map((each) => (
 						<ListGroup.Item
@@ -70,12 +89,7 @@ const PatientBasicCheckUp = () => {
 					<Card.Title className='font-weight-bold lh-25 mb-0 f-18'>
 						Patient Vital Signs
 					</Card.Title>
-					<Button
-						className='btn-link btn f-14 font-weight-bold ml-auto btn-auto p-0'
-						variant='btn-link'
-					>
-						Edit
-					</Button>
+					{Edit}
 				</div>
 				<ListGroup variant='flush' as='ul' className='mb-0'>
 					{mockCheckUpData.map((each) => (

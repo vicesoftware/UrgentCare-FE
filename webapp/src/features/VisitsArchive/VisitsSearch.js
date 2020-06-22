@@ -5,8 +5,8 @@ import { Button, Card, Form } from 'react-bootstrap'
 export default function VisitsSearch() {
 	return (
 		<>
-			<Card class='shadow-sm border-0 mb-25'>
-				<Card.Body class='p-20'>
+			<Card className='shadow-sm border-0 mb-25'>
+				<Card.Body className='p-20'>
 					<Card.Title className='font-weight-bold gotham lh-25 d-block mb-20 f-18'>
 						Search Visits
 					</Card.Title>
@@ -26,7 +26,9 @@ export default function VisitsSearch() {
 							onChange={(ev) => console.log(ev.target.value)}
 						/>
 					</Form.Group>
-					<Button class='btn btn-primary'>Search</Button>
+					<Button className='btn-primary-custom' variant='primary'>
+						Search
+					</Button>
 				</Card.Body>
 			</Card>
 		</>

@@ -25,12 +25,16 @@ export default function NavBar() {
 				<Navbar.Collapse>
 					<Nav className='mr-auto align-items-lg-center '>
 						<Nav.Item>
-							<LinkContainer to='/'>
+							<LinkContainer to='/nurseScreen'>
 								<Nav.Link>Visits</Nav.Link>
 							</LinkContainer>
 						</Nav.Item>
 						<Nav.Item className='px-0 px-md-4'>
-							<Button variant='primary' onClick={() => setShowModal(true)}>
+							<Button
+								className='btn-primary-custom'
+								variant='primary'
+								onClick={() => setShowModal(true)}
+							>
 								Request Visit
 							</Button>
 						</Nav.Item>
