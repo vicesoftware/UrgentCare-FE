@@ -8,8 +8,8 @@ import VisitStatus from '../VisitsProvider/VisitStatus'
 const NurseVisit = () => {
 	const Edit = (
 		<Button
-			className='btn-link btn f-14 font-weight-bold ml-auto btn-auto p-0'
-			variant='btn-link'
+			className='f-14 font-weight-bold ml-auto btn-auto p-0'
+			variant='link'
 		>
 			Edit
 		</Button>

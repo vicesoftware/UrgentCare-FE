@@ -25,7 +25,7 @@ export default function NavBar() {
 				<Navbar.Collapse>
 					<Nav className='mr-auto align-items-lg-center '>
 						<Nav.Item>
-							<LinkContainer to='/nurseScreen'>
+							<LinkContainer to='/nurse/visit'>
 								<Nav.Link>Visits</Nav.Link>
 							</LinkContainer>
 						</Nav.Item>
@@ -46,7 +46,7 @@ export default function NavBar() {
 							</span>
 						</Nav.Item>
 						<Nav.Item>
-							<LinkContainer to='/'>
+							<LinkContainer to='/settings'>
 								<Nav.Link className='d-flex align-items-center'>
 									Settings
 								</Nav.Link>

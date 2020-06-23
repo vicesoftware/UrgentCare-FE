@@ -4,23 +4,23 @@ import Page from './widgets/Page/Page'
 import VisitsArchive from './features/VisitsArchive'
 import VisitsProvider from './features/VisitsProvider'
 import NurseVisit from './features/NurseVisit/NurseVisit'
+import Settings from './features/Settings/Settings'
 
 export default function Routes() {
 	return (
 		<Switch>
-			<PageRoute path='/nurseVisit'>
-				<NurseVisit />
+			<PageRoute path='/settings'>
+				<Settings />
 			</PageRoute>
-			<PageRoute path='/nurseScreen/:patientDetails'>
+			<PageRoute path='/nurse/visit/:id'>
 				<VisitsProvider />
 			</PageRoute>
-			<PageRoute path='/nurse'>
+			<PageRoute path='/nurse/visit'>
 				<VisitsArchive />
 			</PageRoute>
 		</Switch>
 	)
 }
-
 function PageRoute({ children, ...rest }) {
 	return (
 		<Route {...rest}>

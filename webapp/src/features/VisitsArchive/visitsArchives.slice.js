@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import * as asyncActions from './visitArchives.asyncActions'
+import * as asyncActions from './visitsArchives.asyncActions'
 
 const initialState = {
 	patientDetails: [],

@@ -3,8 +3,8 @@ import { useHistory } from 'react-router-dom'
 import Table from '../../widgets/Table'
 import { useSelector, useDispatch } from 'react-redux'
 import React, { useEffect } from 'react'
-import { fetchDetails } from './visitArchives.asyncActions'
-import { selectPatientDetails } from './visitArchives.selector'
+import { fetchDetails } from './visitsArchives.asyncActions'
+import { selectPatientDetails } from './visitsArchives.selector'
 
 const PatientDetailsTable = () => {
 	const history = useHistory()
@@ -18,7 +18,11 @@ const PatientDetailsTable = () => {
 	const patientDetails = useSelector(selectPatientDetails)
 
 	const completeButton = () => (
-		<Button size='md' variant='outline-success f-14 font-weight-bold'>
+		<Button
+			size='md'
+			className='f-14 font-weight-bold'
+			variant='outline-success'
+		>
 			Complete
 		</Button>
 	)
@@ -28,7 +32,7 @@ const PatientDetailsTable = () => {
 			id='viewButton'
 			size='md'
 			className='font-weight-normal btn-light align-right'
-			onClick={() => history.push(`nurseScreen/${id}`)}
+			onClick={() => history.push(`/nurse/visit/${id}`)}
 		>
 			View
 		</Button>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Row, Col, Card, Button, Image, Accordion } from 'react-bootstrap'
 import Icons from '../../assets/icons'
+import classNames from 'classnames'
 
 const ProviderCards = () => {
 	const mockData = [
@@ -82,7 +83,6 @@ const ProviderCards = () => {
 									{each.statusBtnText}
 								</Button>
 							</Col>
-
 							<Accordion.Toggle
 								className='btn-expand f-14 btn btn-link btn-auto p-0 font-weight-bold d-flex align-items-center text-light'
 								variant='link'
@@ -144,11 +144,10 @@ const ProviderCards = () => {
 											)}
 
 											<Button
-												className={
-													each.actionBtnText === 'Edit now'
-														? 'btn-primary-custom'
-														: ''
-												}
+												className={classNames({
+													'btn-primary-custom':
+														each.actionBtnText === 'Edit now',
+												})}
 												variant={
 													each.actionBtnText === 'Save'
 														? 'warning'

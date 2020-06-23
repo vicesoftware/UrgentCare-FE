@@ -14,7 +14,7 @@ const DischargeNote = () => {
 						<span className='status-sign bg-primary d-inline-block rounded-circle mr-2'></span>
 						Patient May Return to School Today
 					</p>
-					<div className=''>
+					<div>
 						<h4 className='text-light f-14 font-weight-bold lh-25 mb-2'>
 							Provider After Visit Summary
 						</h4>

@@ -5,6 +5,7 @@ import { selectModal } from '../NurseVisit/nurseVisit.selectors'
 import { NURSE_VISIT_MODAL } from '../NurseVisitModal/nurseVisit.constants'
 import { Card, Button } from 'react-bootstrap'
 import getNurseVisitModal from '../NurseVisitModal/index'
+import classNames from 'classnames'
 const { setSelectedModal } = actions
 
 const VisitStatus = ({ email, download, cancel, status }) => {
@@ -43,10 +44,10 @@ const VisitStatus = ({ email, download, cancel, status }) => {
 						</div>
 						<div className='flex-fill'>
 							<span
-								className={
-									(cancel ? 'bg-warning' : 'bg-primary') +
-									' status-sign d-inline-block rounded-circle mr-2'
-								}
+								className={classNames(
+									'status-sign d-inline-block rounded-circle mr-2',
+									{ 'bg-warning': cancel, 'bg-primary': !cancel }
+								)}
 							></span>
 							<span>{status}</span>
 						</div>

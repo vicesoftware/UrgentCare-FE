@@ -1,7 +1,7 @@
 import VisitArchive from './VisitsArchive'
-import * as selectors from './visitArchives.selector'
-import slice from './visitArchives.slice'
-import * as asyncActions from './visitArchives.asyncActions'
+import * as selectors from './visitsArchives.selector'
+import slice from './visitsArchives.slice'
+import * as asyncActions from './visitsArchives.asyncActions'
 export const {
 	name,
 
