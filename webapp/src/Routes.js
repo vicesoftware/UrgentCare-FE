@@ -14,7 +14,7 @@ export default function Routes() {
 			<PageRoute path='/nurseScreen/:patientDetails'>
 				<VisitsProvider />
 			</PageRoute>
-			<PageRoute path='/nurseScreen'>
+			<PageRoute path='/nurse'>
 				<VisitsArchive />
 			</PageRoute>
 		</Switch>

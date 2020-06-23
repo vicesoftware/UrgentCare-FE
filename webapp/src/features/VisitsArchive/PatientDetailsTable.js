@@ -1,73 +1,21 @@
-import React from 'react'
 import { Button } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
 import Table from '../../widgets/Table'
+import { useSelector, useDispatch } from 'react-redux'
+import React, { useEffect } from 'react'
+import { fetchDetails } from './visitArchives.asyncActions'
+import { selectPatientDetails } from './visitArchives.selector'
 
 const PatientDetailsTable = () => {
 	const history = useHistory()
 
-	const mockDetails = [
-		{
-			id: 1,
-			patientName: 'Cody Miles',
-			visitDate: 'May 26, 2020',
-			visitReason: 'Nausea',
-		},
-		{
-			id: 2,
-			patientName: 'Johnny Walker	',
-			visitDate: 'May 26, 2020',
-			visitReason: 'Nausea',
-		},
-		{
-			id: 3,
-			patientName: 'Jesse Pinkman	',
-			visitDate: 'May 26, 2020',
-			visitReason: 'Nausea',
-		},
-		{
-			id: 4,
-			patientName: 'Sarah Daniels	',
-			visitDate: 'May 26, 2020',
-			visitReason: 'Nausea',
-		},
-		{
-			id: 5,
-			patientName: 'Johnny Walker	',
-			visitDate: 'May 26, 2020',
-			visitReason: 'Nausea',
-		},
-		{
-			id: 6,
-			patientName: 'Jesse Pinkman	',
-			visitDate: 'May 26, 2020',
-			visitReason: 'Nausea',
-		},
-		{
-			id: 7,
-			patientName: 'Sarah Daniels	',
-			visitDate: 'May 26, 2020',
-			visitReason: 'Nausea',
-		},
-		{
-			id: 8,
-			patientName: 'Johnny Walker	',
-			visitDate: 'May 26, 2020',
-			visitReason: 'Nausea',
-		},
-		{
-			id: 9,
-			patientName: 'Jesse Pinkman	',
-			visitDate: 'May 26, 2020',
-			visitReason: 'Nausea',
-		},
-		{
-			id: 10,
-			patientName: 'Jesse Pinkman	',
-			visitDate: 'May 26, 2020',
-			visitReason: 'Nausea',
-		},
-	]
+	const dispatch = useDispatch()
+
+	useEffect(() => {
+		dispatch(fetchDetails())
+	})
+
+	const patientDetails = useSelector(selectPatientDetails)
 
 	const completeButton = () => (
 		<Button size='md' variant='outline-success f-14 font-weight-bold'>
@@ -114,7 +62,7 @@ const PatientDetailsTable = () => {
 
 	return (
 		<div className='border-4'>
-			<Table keyField='id' columns={columns} data={mockDetails} />
+			<Table keyField='id' columns={columns} data={patientDetails} />
 		</div>
 	)
 }

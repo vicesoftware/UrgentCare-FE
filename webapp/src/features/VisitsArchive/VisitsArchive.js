@@ -1,6 +1,7 @@
 import React from 'react'
 import VisitsSearch from './VisitsSearch'
 import { Row, Col } from 'react-bootstrap'
+
 import PatientDetailsTable from './PatientDetailsTable'
 
 export default function VisitsArchive() {

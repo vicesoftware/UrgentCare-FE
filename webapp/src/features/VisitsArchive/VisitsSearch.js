@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './VisitsArchive.css'
+import DatePicker from '../../widgets/DatePicker'
 import { Button, Card, Form } from 'react-bootstrap'
 
 export default function VisitsSearch() {
+	const [dateRange, setDateRange] = useState(undefined)
+	const onClose = () => {}
+
 	return (
 		<>
 			<Card className='shadow-sm border-0 mb-25'>
@@ -10,6 +14,7 @@ export default function VisitsSearch() {
 					<Card.Title className='font-weight-bold gotham lh-25 d-block mb-20 f-18'>
 						Search Visits
 					</Card.Title>
+
 					<Form.Group className='mb-10'>
 						<Form.Control
 							className='search-control'
@@ -19,10 +24,13 @@ export default function VisitsSearch() {
 						/>
 					</Form.Group>
 					<Form.Group className='mb-10'>
-						<Form.Control
-							className='calender-input'
-							type='text'
-							placeholder='May 1, 2020 - May 26, 2020'
+						<DatePicker
+							className='react-datepicker-wrapper'
+							date={dateRange}
+							setDate={setDateRange}
+							placeholder='Feb 1 - Feb 28, 2020'
+							hasRangeSelector={true}
+							handleClose={onClose}
 							onChange={(ev) => console.log(ev.target.value)}
 						/>
 					</Form.Group>
