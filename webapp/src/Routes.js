@@ -3,7 +3,6 @@ import { Switch, Route } from 'react-router-dom'
 import Page from './widgets/Page/Page'
 import VisitsArchive from './features/VisitsArchive'
 import VisitsProvider from './features/VisitsProvider'
-import NurseVisit from './features/NurseVisit/NurseVisit'
 import Settings from './features/Settings/Settings'
 
 export default function Routes() {
