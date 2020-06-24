@@ -3,10 +3,12 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
 import { LinkContainer } from 'react-router-bootstrap'
+import { useAuth0 } from '../../react-auth0-spa'
 import './NavBar.css'
 import IMAGES from '../../assets/images'
 
 export default function NavBar() {
+	const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0()
 	return (
 		<Navbar bg='white' expand='lg' className='static-top p-0'>
 			<div className='container-fluid'>
@@ -35,7 +37,7 @@ export default function NavBar() {
 					<Nav className='nav-bar-right '>
 						<Nav.Item className='px-0 px-md-4'>
 							<span className='f-14 px-15 nav-link font-weight-normal'>
-								Welcome, Nurse Lisa Smith
+								{user && `Welcome ${user.name}`}
 							</span>
 						</Nav.Item>
 						<Nav.Item>
@@ -47,9 +49,18 @@ export default function NavBar() {
 						</Nav.Item>
 						<Nav.Item>
 							<LinkContainer to='/'>
-								<Nav.Link className='d-flex align-items-center'>
-									Log out
-								</Nav.Link>
+								{isAuthenticated ? (
+									<Nav.Link
+										className='d-flex align-items-center'
+										onClick={() => logout()}
+									>
+										Log out
+									</Nav.Link>
+								) : (
+									<Nav.Link onClick={() => loginWithRedirect({})}>
+										Log in
+									</Nav.Link>
+								)}
 							</LinkContainer>
 						</Nav.Item>
 					</Nav>

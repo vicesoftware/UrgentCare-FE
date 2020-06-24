@@ -4,6 +4,7 @@ import * as modal from './widgets/modal'
 import * as pendingRequest from './infrastructure/pendingRequest'
 import * as notificationPopup from './infrastructure/notificationPopup'
 import * as httpCache from './infrastructure/httpCache'
+import * as userContext from './features/userContext'
 import * as NurseVisitsArchive from './features/NurseVisitsArchive'
 
 export default combineReducers({
@@ -12,5 +13,6 @@ export default combineReducers({
 	[pendingRequest.name]: pendingRequest.reducer,
 	[notificationPopup.name]: notificationPopup.reducer,
 	[httpCache.name]: httpCache.reducer,
+	[userContext.name]: userContext.reducer,
 	[NurseVisitsArchive.name]: NurseVisitsArchive.reducer,
 })
