@@ -9,7 +9,7 @@ const nurseMockVisits = [
 		visitReason: 'Headache',
 		Language: 'English',
 		TotalTime: '00:01:21',
-		status: 'Completed',
+		status: 'Complete',
 		id: '6ffc-ed77-94fa',
 	},
 	{
@@ -29,7 +29,7 @@ const nurseMockVisits = [
 		visitReason: 'Stomach Ache',
 		Language: 'English',
 		TotalTime: '00:01:21',
-		status: 'Completed',
+		status: 'Complete',
 		id: '6ffc-ed77-94fa',
 	},
 	{
@@ -39,7 +39,7 @@ const nurseMockVisits = [
 		visitReason: 'Injury',
 		Language: 'English',
 		TotalTime: '00:01:21',
-		status: 'Completed',
+		status: 'Complete',
 		id: '6ffc-ed77-94fa',
 	},
 	{

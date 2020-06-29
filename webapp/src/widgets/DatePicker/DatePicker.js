@@ -67,17 +67,15 @@ const CustomDatePicker = ({
 			}}
 		>
 			{hasRangeSelector && (
-				<div>
-					<Button
-						className='btn-block'
-						variant='primary'
-						size='lg'
-						type='button'
-						onClick={closeDatePicker}
-					>
-						Save
-					</Button>
-				</div>
+				<Button
+					className='btn-block'
+					variant='primary'
+					size='lg'
+					type='button'
+					onClick={closeDatePicker}
+				>
+					Save
+				</Button>
 			)}
 		</DatePicker>
 	)
