@@ -119,7 +119,7 @@ const UserInformations = () => {
 										<Col md={8}>
 											<Form.Control
 												as='select'
-												name='credentials'
+												name='credential'
 												onChange={handleChange}
 												value={values.credentials}
 												onBlur={handleBlur}
