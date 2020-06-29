@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import React, { useEffect } from 'react'
 import { fetchNurseVisits } from './nurseVisitsArchive.asyncActions'
 import { selectNurseVisits } from './nurseVisitsArchive.selectors'
+import { NURSE_VISITS_STATUS } from './nurseVisitsArchive.constants'
 
 const NurseVisitsTable = () => {
 	const history = useHistory()
@@ -18,7 +19,7 @@ const NurseVisitsTable = () => {
 
 	const visitsStatusFormatter = (status) => {
 		switch (status) {
-			case 'IN_PROGRESS':
+			case NURSE_VISITS_STATUS.IN_PROGRESS:
 				return (
 					<Button
 						size='md'
@@ -28,7 +29,7 @@ const NurseVisitsTable = () => {
 						In Progress
 					</Button>
 				)
-			case 'IN_WAITING':
+			case NURSE_VISITS_STATUS.WAITING:
 				return (
 					<Button
 						size='md'

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Row, Col, FormControl, InputGroup } from 'react-bootstrap'
+import './VisitsSearch.css'
 
 const VisitsSearch = () => (
 	<div className='container-fluid'>

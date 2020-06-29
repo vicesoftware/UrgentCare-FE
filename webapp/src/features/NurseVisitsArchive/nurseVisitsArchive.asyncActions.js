@@ -9,7 +9,7 @@ const nurseMockVisits = [
 		visitReason: 'Headache',
 		Language: 'English',
 		TotalTime: '00:01:21',
-		status: 'complete',
+		status: 'Completed',
 		id: '6ffc-ed77-94fa',
 	},
 	{
@@ -19,7 +19,7 @@ const nurseMockVisits = [
 		visitReason: 'Headache',
 		Language: 'English',
 		TotalTime: '00:01:21',
-		status: 'IN_PROGRESS',
+		status: 'In Progress',
 		id: '12be34-2f55-2a',
 	},
 	{
@@ -29,7 +29,7 @@ const nurseMockVisits = [
 		visitReason: 'Stomach Ache',
 		Language: 'English',
 		TotalTime: '00:01:21',
-		status: 'complete',
+		status: 'Completed',
 		id: '6ffc-ed77-94fa',
 	},
 	{
@@ -39,7 +39,7 @@ const nurseMockVisits = [
 		visitReason: 'Injury',
 		Language: 'English',
 		TotalTime: '00:01:21',
-		status: 'complete',
+		status: 'Completed',
 		id: '6ffc-ed77-94fa',
 	},
 	{
@@ -49,7 +49,7 @@ const nurseMockVisits = [
 		visitReason: 'Fever',
 		Language: 'English',
 		TotalTime: '00:01:21',
-		status: 'IN_WAITING',
+		status: 'Waiting',
 		id: '6ffc-ed77-94fa',
 	},
 	{
@@ -59,7 +59,7 @@ const nurseMockVisits = [
 		visitReason: 'Headache',
 		Language: 'English',
 		TotalTime: '00:01:21',
-		status: 'IN_WAITING',
+		status: 'Waiting',
 		id: '6ffc-ed77-94fa',
 	},
 
