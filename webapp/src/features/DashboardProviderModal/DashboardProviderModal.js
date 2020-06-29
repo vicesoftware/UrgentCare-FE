@@ -1,13 +1,27 @@
 import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import Modal, { showModal } from '../../widgets/modal'
+import { useDispatch, useSelector } from 'react-redux'
+import Modal, { hideModal, showModal } from '../../widgets/modal'
+import { actions } from '../DashboardProvider/dashboardProvider.slice'
 import { Button, Col, ListGroup } from 'react-bootstrap'
+import { useHistory } from 'react-router-dom'
+import { selectVisitId } from '../DashboardProvider/dashboardProvider.selector'
+const { setSelectedModal } = actions
 
-const ViewModal = ({ onClose }) => {
+const DashboardProviderModal = () => {
+	const history = useHistory()
+	const id = useSelector(selectVisitId)
 	const dispatch = useDispatch()
+	const resetModal = () => dispatch(setSelectedModal(null))
+
 	useEffect(() => {
 		dispatch(showModal())
 	})
+
+	const handleClose = () => {
+		dispatch(hideModal())
+		resetModal()
+	}
+
 	const mockPatientData = [
 		{
 			title: 'Date of Birth',
@@ -68,21 +82,27 @@ const ViewModal = ({ onClose }) => {
 
 	const footer = (
 		<>
-			<Button type='button' variant='success'>
+			<Button
+				type='button'
+				variant='success'
+				onClick={() => history.push(`/provider/visit/${id}`)}
+			>
 				Claim Visit
 			</Button>
+
 			<Button
 				type='button'
 				variant='light'
 				class='btn btn-light btn-small'
 				data-dismiss='modal'
+				onClick={handleClose}
 			>
 				Cancel
 			</Button>
 		</>
 	)
 	return (
-		<Modal title='Visit Details' reset={onClose} footer={footer}>
+		<Modal title='Visit Details' reset={resetModal} footer={footer}>
 			<div className='row mb-30'>
 				<div className='col-md-6'>
 					<h4 className='font-weight-bold card-title gotham lh-25 d-block mb-1 f-16'>
@@ -145,4 +165,4 @@ const ViewModal = ({ onClose }) => {
 	)
 }
 
-export default ViewModal
+export default DashboardProviderModal

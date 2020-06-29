@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Card, ListGroup, Button } from 'react-bootstrap'
+import { Col, Card, ListGroup } from 'react-bootstrap'
 
 const LeftPanelDetails = ({ Edit }) => {
 	const mockPatientData = [
@@ -8,20 +8,28 @@ const LeftPanelDetails = ({ Edit }) => {
 			descripition: 'April 5, 1988',
 		},
 		{
-			title: 'Biological Sex',
+			title: 'Birth Sex',
 			descripition: 'Male',
 		},
 		{
-			title: 'Height',
-			descripition: '5.9',
+			title: 'Allergies',
+			descripition: 'Peanuts Seasonal',
 		},
 		{
-			title: 'Weight',
-			descripition: '170 lbs',
+			title: 'Known Medications',
+			descripition: 'Flonase',
 		},
 		{
-			title: 'Reason For Visit',
+			title: 'Known Conditions',
+			descripition: 'N/A',
+		},
+		{
+			title: 'Reason for Visit',
 			descripition: 'Nausea',
+		},
+		{
+			title: 'Additional Notes',
+			descripition: 'N/A',
 		},
 	]
 
@@ -31,8 +39,16 @@ const LeftPanelDetails = ({ Edit }) => {
 			value: 98.5 + 'F',
 		},
 		{
+			vitalSign: 'Weight',
+			value: 145 + 'LBS/' + 65.7 + 'KG',
+		},
+		{
 			vitalSign: 'Pulse rate',
 			value: 70 + 'BPM',
+		},
+		{
+			vitalSign: 'Pulse OX',
+			value: 95 + '%',
 		},
 		{
 			vitalSign: 'Respiration Rate',
@@ -72,14 +88,6 @@ const LeftPanelDetails = ({ Edit }) => {
 				<div className='d-flex align-items-center mb-10'>
 					<Card.Title className='font-weight-bold lh-25 mb-0 f-18'>
 						Patient Vital Signs
-						<Button
-							className='f-14 font-weight-bold ml-auto btn-auto p-0'
-							variant='link'
-							data-target='#vital-sign-modal'
-							data-toggle='modal'
-						>
-							Edit
-						</Button>
 					</Card.Title>
 					{Edit}
 				</div>

@@ -4,7 +4,7 @@ import Icons from '../../assets/icons'
 import classNames from 'classnames'
 
 const CardCenterInProgress = () => {
-	const mockData = [
+	const patientDiagnosisData = [
 		{
 			eventKey: '0',
 			title: 'Step Test',
@@ -71,7 +71,7 @@ const CardCenterInProgress = () => {
 
 	return (
 		<Card className='border-0  mb-20 bg-light'>
-			{mockData.map((each) => (
+			{patientDiagnosisData.map((each) => (
 				<Card.Body
 					className='p-20 shadow-sm mb-4 rounded bg-white'
 					key={each.title}

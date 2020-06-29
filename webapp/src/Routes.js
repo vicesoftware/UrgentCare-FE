@@ -4,17 +4,21 @@ import Page from './widgets/Page/Page'
 import VisitsArchive from './features/VisitsArchive'
 import VisitsProvider from './features/VisitsProvider'
 import Settings from './features/Settings/Settings'
-import Dashboard from './features/Dashboard'
+import DashboardProvider from './features/DashboardProvider'
 import ProviderVisitItem from './features/ProviderVisitItem'
+import NurseVisit from './features/NurseVisit'
 
 export default function Routes() {
 	return (
 		<Switch>
-			<PageRoute path='/provider'>
+			<PageRoute path='/visit'>
+				<NurseVisit />
+			</PageRoute>
+			<PageRoute path='/provider/visit/:id'>
 				<ProviderVisitItem />
 			</PageRoute>
-			<PageRoute path='/dashboard'>
-				<Dashboard />
+			<PageRoute path='/dashboard/Provider'>
+				<DashboardProvider />
 			</PageRoute>
 			<PageRoute path='/settings'>
 				<Settings />
