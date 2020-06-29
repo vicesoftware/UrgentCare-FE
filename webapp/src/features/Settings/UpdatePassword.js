@@ -5,7 +5,7 @@ import * as Yup from 'yup'
 import classNames from 'classnames'
 import isEmpty from 'lodash/isEmpty'
 
-export default function UpdatePassword() {
+const UpdatePassword = () => {
 	const validationSchema = Yup.object().shape({
 		currentPassword: Yup.string()
 			.required('Password is Required')
@@ -118,3 +118,5 @@ export default function UpdatePassword() {
 		</Formik>
 	)
 }
+
+export default UpdatePassword

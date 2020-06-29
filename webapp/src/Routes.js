@@ -1,20 +1,17 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Page from './widgets/Page/Page'
-import NurseVisitArchive from './features/NurseVisitArchive'
-import Settings from './features/Settings/Settings'
-import NurseVisitItem from './features/NurseVisitItem'
+import NurseVisitsArchive from './features/NurseVisitsArchive'
+import Settings from './features/Settings'
+
 export default function Routes() {
 	return (
 		<Switch>
 			<PageRoute path='/settings'>
 				<Settings />
 			</PageRoute>
-			<PageRoute path='/nurse/visit/:id'>
-				<NurseVisitItem />
-			</PageRoute>
 			<PageRoute path='/nurse/visit'>
-				<NurseVisitArchive />
+				<NurseVisitsArchive />
 			</PageRoute>
 		</Switch>
 	)

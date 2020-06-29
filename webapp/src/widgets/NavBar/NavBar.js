@@ -1,17 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
 import { LinkContainer } from 'react-router-bootstrap'
 import './NavBar.css'
 import IMAGES from '../../assets/images'
-import RequestVisitModal from '../../features/NurseVisitArchive/RequestVisitModal'
 
 export default function NavBar() {
-	const [showModal, setShowModal] = useState(false)
 	return (
 		<Navbar bg='white' expand='lg' className='static-top p-0'>
-			{showModal && <RequestVisitModal onClose={() => setShowModal(false)} />}
 			<div className='container-fluid'>
 				<LinkContainer to='/'>
 					<Navbar.Brand className='pt-0 mr-15'>
@@ -30,11 +27,7 @@ export default function NavBar() {
 							</LinkContainer>
 						</Nav.Item>
 						<Nav.Item className='px-0 px-md-4'>
-							<Button
-								className='btn btn-warning btn-lg'
-								variant='primary'
-								onClick={() => setShowModal(true)}
-							>
+							<Button className='btn btn-warning btn-lg' variant='primary'>
 								Request Visit
 							</Button>
 						</Nav.Item>

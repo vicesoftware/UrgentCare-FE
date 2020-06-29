@@ -5,7 +5,7 @@ import * as Yup from 'yup'
 import classNames from 'classnames'
 import isEmpty from 'lodash/isEmpty'
 
-export default function YourInformation() {
+const UserInformations = () => {
 	const validationSchema = Yup.object().shape({
 		name: Yup.string().required('Name is required'),
 		email: Yup.string()
@@ -113,3 +113,5 @@ export default function YourInformation() {
 		</Formik>
 	)
 }
+
+export default UserInformations

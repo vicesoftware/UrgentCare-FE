@@ -3,21 +3,20 @@ import { useHistory } from 'react-router-dom'
 import Table from '../../widgets/Table'
 import { useSelector, useDispatch } from 'react-redux'
 import React, { useEffect } from 'react'
-import { fetchDetails } from './visitsArchives.asyncActions'
-import { selectPatientDetails } from './visitsArchives.selector'
+import { fetchNurseVisits } from './nurseVisitsArchive.asyncActions'
+import { selectNurseVisits } from './nurseVisitsArchive.selectors'
 
-const PatientDetailsTable = () => {
+const NurseVisitsTable = () => {
 	const history = useHistory()
-
 	const dispatch = useDispatch()
 
 	useEffect(() => {
-		dispatch(fetchDetails())
+		dispatch(fetchNurseVisits())
 	})
 
-	const patientDetails = useSelector(selectPatientDetails)
+	const nurseVisits = useSelector(selectNurseVisits)
 
-	const completeButton = (status) => {
+	const visitsStatusFormatter = (status) => {
 		switch (status) {
 			case 'IN_PROGRESS':
 				return (
@@ -52,7 +51,7 @@ const PatientDetailsTable = () => {
 		}
 	}
 
-	const viewButton = (id) => (
+	const viewButtonFormatter = (id) => (
 		<Button
 			id='viewButton'
 			size='md'
@@ -96,23 +95,23 @@ const PatientDetailsTable = () => {
 		{
 			dataField: 'status',
 			text: 'status',
-			formatter: completeButton,
+			formatter: visitsStatusFormatter,
 			sort: true,
 		},
 
 		{
 			dataField: 'id',
 			text: '',
-			formatter: viewButton,
+			formatter: viewButtonFormatter,
 			classes: 'align-item-right',
 		},
 	]
 
 	return (
 		<div className='border-4'>
-			<Table keyField='id' columns={columns} data={patientDetails} />
+			<Table keyField='id' columns={columns} data={nurseVisits} />
 		</div>
 	)
 }
 
-export default PatientDetailsTable
+export default NurseVisitsTable

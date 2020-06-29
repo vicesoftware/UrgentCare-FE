@@ -4,14 +4,16 @@ import NavBar from './widgets/NavBar'
 import Routes from './Routes'
 import './app.css'
 import NotificationPopup from './infrastructure/notificationPopup'
+import Footer from './widgets/Footer'
 
 function App() {
 	return (
 		<Router>
 			<NavBar />
-			<div className='page  bg-light'>
+			<div className='page bg-light'>
 				<NotificationPopup />
 				<Routes />
+				<Footer />
 			</div>
 		</Router>
 	)

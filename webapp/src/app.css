@@ -386,7 +386,7 @@ select.form-control {
 }
 .waiting-box {
 	padding: 25px 75px;
-	background-image: url(./assets/images/waitingDuckLogo.png);
+	background-image: url(./assets/images/logoCircle.png);
 	background-position: -20px 160%;
 	background-repeat: no-repeat;
 	background-size: 140px;

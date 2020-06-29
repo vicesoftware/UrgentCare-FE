@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import doAsync from '../../infrastructure/doAsync'
 
-const mockDetails = [
+const nurseMockVisits = [
 	{
 		patientName: 'Cody Miles',
 		Campus: 'GISD',
@@ -157,15 +157,15 @@ const mockDetails = [
 	},
 ]
 
-export const fetchDetails = createAsyncThunk(
-	'visitArchives/fetchDetails',
+export const fetchNurseVisits = createAsyncThunk(
+	'nurseVisits/fetch',
 	async ({ useCaching, noBusySpinner } = {}, thunkArgs) =>
 		await doAsync({
-			url: `api/analytics/`,
+			url: `api/nurse/visits`,
 			useCaching,
 			noBusySpinner,
-			errorMessage: 'Unable to load data for cards. Please try again later.',
-			stubSuccess: mockDetails,
+			errorMessage: 'Unable to load nurse visits. Please try again later.',
+			stubSuccess: nurseMockVisits,
 			...thunkArgs,
 		})
 )
