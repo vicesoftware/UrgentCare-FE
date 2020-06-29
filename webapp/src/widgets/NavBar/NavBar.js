@@ -22,7 +22,7 @@ export default function NavBar() {
 				<Navbar.Collapse>
 					<Nav className='mr-auto align-items-lg-center '>
 						<Nav.Item>
-							<LinkContainer to='/nurse/visit'>
+							<LinkContainer to='/nurse/visits'>
 								<Nav.Link>Visits</Nav.Link>
 							</LinkContainer>
 						</Nav.Item>

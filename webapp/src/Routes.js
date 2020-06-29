@@ -10,7 +10,7 @@ export default function Routes() {
 			<PageRoute path='/settings'>
 				<Settings />
 			</PageRoute>
-			<PageRoute path='/nurse/visit'>
+			<PageRoute path='/nurse/visits'>
 				<NurseVisitsArchive />
 			</PageRoute>
 		</Switch>

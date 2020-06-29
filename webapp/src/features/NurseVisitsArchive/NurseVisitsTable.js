@@ -57,7 +57,7 @@ const NurseVisitsTable = () => {
 			id='viewButton'
 			size='md'
 			className='font-weight-normal btn-light align-right'
-			onClick={() => history.push(`/nurse/visit/${id}`)}
+			onClick={() => history.push(`/nurse/visits/${id}`)}
 		>
 			View
 		</Button>
