@@ -1,11 +1,11 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
-import UserInformations from './UserInformations' // TODO UserInformation
+import UserInformation from './UserInformation'
 import UpdatePassword from './UpdatePassword'
 const Settings = () => (
 	<Row>
 		<Col lg={4} xl={5}>
-			<UserInformations />
+			<UserInformation />
 		</Col>
 		<Col lg={4} xl={5}>
 			<UpdatePassword />

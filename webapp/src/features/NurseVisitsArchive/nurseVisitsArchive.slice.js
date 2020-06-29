@@ -2,16 +2,15 @@ import { createSlice } from '@reduxjs/toolkit'
 import * as asyncActions from './nurseVisitsArchive.asyncActions'
 
 const initialState = {
-	patientDetails: [],
+	nurseVisits: [],
 }
-// TODO use archive here as well instead of archives
 const slice = createSlice({
-	name: 'nurseVisitsArchives',
+	name: 'nurseVisitsArchive',
 	initialState,
 
 	extraReducers: {
 		[asyncActions.fetchNurseVisits.fulfilled]: (state, action) => {
-			state.patientDetails = action.payload
+			state.nurseVisits = action.payload
 		},
 	},
 })

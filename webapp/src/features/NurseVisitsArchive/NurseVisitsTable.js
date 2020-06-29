@@ -67,12 +67,12 @@ const NurseVisitsTable = () => {
 		{ dataField: 'patientName', text: 'Patient Name', sort: true },
 
 		{
-			dataField: 'Campus',
+			dataField: 'campus',
 			text: 'Campus',
 			sort: true,
 		},
 		{
-			dataField: 'State',
+			dataField: 'state',
 			text: 'State',
 			sort: true,
 		},
@@ -83,19 +83,18 @@ const NurseVisitsTable = () => {
 			sort: true,
 		},
 		{
-			dataField: 'Language',
+			dataField: 'language',
 			text: 'Language',
 			sort: true,
 		},
 		{
-			dataField: 'TotalTime',
+			dataField: 'totalTime',
 			text: 'Total Time',
-
 			sort: true,
 		},
 		{
-			dataField: 'status', // TODO all other table headings are in upperCase
-			text: 'status',
+			dataField: 'status',
+			text: 'Status',
 			formatter: visitsStatusFormatter,
 			sort: true,
 		},
