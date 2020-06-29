@@ -1,16 +1,19 @@
 import React from 'react'
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Container } from 'react-bootstrap'
 import UserInformations from './UserInformations'
 import UpdatePassword from './UpdatePassword'
+
 const Settings = () => (
-	<Row>
-		<Col lg={4} xl={5}>
-			<UserInformations />
-		</Col>
-		<Col lg={4} xl={5}>
-			<UpdatePassword />
-		</Col>
-	</Row>
+	<Container fluid>
+		<Row>
+			<Col md={6}>
+				<UserInformations />
+			</Col>
+			<Col md={6}>
+				<UpdatePassword />
+			</Col>
+		</Row>
+	</Container>
 )
 
 export default Settings
