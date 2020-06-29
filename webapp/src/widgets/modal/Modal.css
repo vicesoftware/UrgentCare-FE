@@ -1,0 +1,35 @@
+.modal-footer,
+.modal-header,
+.modal-body {
+	padding: 20px;
+}
+.modal-backdrop {
+	background-color: #0d1e45;
+}
+.upload-container {
+	min-height: 150px;
+	border: 2px dashed rgba(13, 30, 69, 0.5);
+	border-radius: 4px;
+}
+
+.modal-header .close {
+	position: relative;
+	right: 20px;
+	top: 28px;
+}
+@media (min-width: 576px) {
+	.modal-dialog {
+		max-width: 690px;
+	}
+}
+@media (min-width: 768px) {
+	.modal-footer .btn-secondary {
+		min-width: 250px;
+	}
+}
+.modal-backdrop {
+	background-color: #428ec2;
+}
+.modal-backdrop.show {
+	opacity: 0.8 !important;
+}

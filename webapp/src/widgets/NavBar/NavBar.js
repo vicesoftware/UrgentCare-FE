@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
 import { LinkContainer } from 'react-router-bootstrap'
 import './NavBar.css'
 import IMAGES from '../../assets/images'
+import RequestVisitModal from '../../features/VisitsArchive/RequestVisitModal'
 
 export default function NavBar() {
+	const [showModal, setShowModal] = useState(false)
 	return (
 		<Navbar bg='white' expand='lg' className='static-top p-0'>
+			{showModal && <RequestVisitModal onClose={() => setShowModal(false)} />}
 			<div className='container-fluid'>
 				<LinkContainer to='/'>
 					<Navbar.Brand className='pt-0 mr-15'>
@@ -22,12 +25,18 @@ export default function NavBar() {
 				<Navbar.Collapse>
 					<Nav className='mr-auto align-items-lg-center '>
 						<Nav.Item>
-							<LinkContainer to='/'>
+							<LinkContainer to='/nurse/visit'>
 								<Nav.Link>Visits</Nav.Link>
 							</LinkContainer>
 						</Nav.Item>
 						<Nav.Item className='px-0 px-md-4'>
-							<Button variant='primary'>Request Visit</Button>
+							<Button
+								className='btn-primary-custom'
+								variant='primary'
+								onClick={() => setShowModal(true)}
+							>
+								Request Visit
+							</Button>
 						</Nav.Item>
 					</Nav>
 					<Nav className='nav-bar-right '>
@@ -37,7 +46,7 @@ export default function NavBar() {
 							</span>
 						</Nav.Item>
 						<Nav.Item>
-							<LinkContainer to='/'>
+							<LinkContainer to='/settings'>
 								<Nav.Link className='d-flex align-items-center'>
 									Settings
 								</Nav.Link>
