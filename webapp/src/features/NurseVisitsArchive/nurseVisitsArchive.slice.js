@@ -4,7 +4,7 @@ import * as asyncActions from './nurseVisitsArchive.asyncActions'
 const initialState = {
 	patientDetails: [],
 }
-
+// TODO use archive here as well instead of archives
 const slice = createSlice({
 	name: 'nurseVisitsArchives',
 	initialState,

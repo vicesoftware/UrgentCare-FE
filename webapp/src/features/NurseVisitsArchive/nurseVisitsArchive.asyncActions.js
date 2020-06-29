@@ -4,10 +4,10 @@ import doAsync from '../../infrastructure/doAsync'
 const nurseMockVisits = [
 	{
 		patientName: 'Cody Miles',
-		Campus: 'GISD',
+		Campus: 'GISD', // TODO campus
 		State: 'Texas',
 		visitReason: 'Headache',
-		Language: 'English',
+		Language: 'English', // TODO language, state, totalTime
 		TotalTime: '00:01:21',
 		status: 'Complete',
 		id: '6ffc-ed77-94fa',

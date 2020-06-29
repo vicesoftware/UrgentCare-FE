@@ -94,7 +94,7 @@ const NurseVisitsTable = () => {
 			sort: true,
 		},
 		{
-			dataField: 'status',
+			dataField: 'status', // TODO all other table headings are in upperCase
 			text: 'status',
 			formatter: visitsStatusFormatter,
 			sort: true,

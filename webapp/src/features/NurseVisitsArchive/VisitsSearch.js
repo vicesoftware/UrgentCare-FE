@@ -20,7 +20,7 @@ const VisitsSearch = () => (
 					<FormControl
 						className='calender-input '
 						type='text'
-						placeholder='ALL Time'
+						placeholder='All Time'
 					></FormControl>
 				</InputGroup>
 			</Col>

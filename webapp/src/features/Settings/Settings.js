@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
-import UserInformations from './UserInformations'
+import UserInformations from './UserInformations' // TODO UserInformation
 import UpdatePassword from './UpdatePassword'
 const Settings = () => (
 	<Row>
