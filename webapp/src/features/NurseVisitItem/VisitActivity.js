@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col, Card, ListGroup } from 'react-bootstrap'
+import './NurseVisitItem.css'
 
 const VisitActivity = () => {
 	var date = new Date()

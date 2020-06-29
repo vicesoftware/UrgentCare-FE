@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, Image } from 'react-bootstrap'
 import IMAGES from '../../assets/images'
 
-const ProviderTimer = () => {
+const NurseVisitItemWaiting = () => {
 	return (
 		<div>
 			<Card className='border-0 shadow-sm mb-30'>
@@ -28,4 +28,4 @@ const ProviderTimer = () => {
 	)
 }
 
-export default ProviderTimer
+export default NurseVisitItemWaiting

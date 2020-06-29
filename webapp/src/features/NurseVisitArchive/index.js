@@ -1,4 +1,4 @@
-import VisitArchive from './VisitsArchive'
+import NurseVisitArchive from './NurseVisitArchive'
 import * as selectors from './visitsArchives.selector'
 import slice from './visitsArchives.slice'
 import * as asyncActions from './visitsArchives.asyncActions'
@@ -10,4 +10,4 @@ export const {
 export const { fetchDetails } = asyncActions
 export const { selectPatientDetails } = selectors
 
-export default VisitArchive
+export default NurseVisitArchive

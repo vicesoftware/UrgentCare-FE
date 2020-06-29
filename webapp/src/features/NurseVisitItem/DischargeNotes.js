@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 
-const DischargeNote = () => {
+const DischargeNotes = () => {
 	return (
 		<Card className='shadow-sm border-0 mb-20'>
 			<Card.Body className='p-20'>
@@ -38,4 +38,4 @@ const DischargeNote = () => {
 	)
 }
 
-export default DischargeNote
+export default DischargeNotes

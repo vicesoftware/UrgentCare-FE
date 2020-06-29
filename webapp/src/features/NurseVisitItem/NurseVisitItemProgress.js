@@ -3,27 +3,12 @@ import { Row, Col, Card, Button, Image, Accordion } from 'react-bootstrap'
 import Icons from '../../assets/icons'
 import classNames from 'classnames'
 
-const ProviderCards = () => {
+const NurseVisitItemProgress = () => {
 	const mockData = [
 		{
 			eventKey: '0',
-			title: 'Perform COVID Test',
-			statusBtnText: 'Negative',
-			providerOrders: 'Provider Orders',
-			providerOrderDescripition:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-			documentAdministration: 'Document Administration',
-			documentAdministrationContent:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-			followUpInstruction: 'Follow-up Instructions',
-			followUpInstructionContent:
-				'The following instructions will be appended to your provider note',
-			actionBtnText: 'Save',
-		},
-		{
-			eventKey: '1',
-			title: 'Perform a Step Test',
-			statusBtnText: 'Complete',
+			title: ' Tylenol, 650 mg',
+			statusBtnText: 'InComplete',
 			providerOrders: 'Provider Orders',
 			providerOrderDescripition:
 				'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.',
@@ -32,8 +17,19 @@ const ProviderCards = () => {
 			actionBtnText: 'Complete Order',
 		},
 		{
+			eventKey: '1',
+			title: 'Erythromycin, 333 mg',
+			statusBtnText: 'InComplete',
+			providerOrders: 'Provider Orders',
+			providerOrderDescripition:
+				' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere feugiat odio, eget rhoncus ipsum sollicitudin eu. Nulla nibh nisi, pellentesque id placerat sit amet, lacinia nec ex. Proin non congue massa..',
+			documentAdministration: 'Please Provide Administration Documentation:',
+			documentAdministrationContent: '',
+			actionBtnText: 'Complete Order',
+		},
+		{
 			eventKey: '2',
-			title: 'Perscribed: Tylenol, 650 mg',
+			title: 'Ethanol, 650 mg',
 			statusBtnText: 'Complete',
 			providerOrders: 'Provider Orders',
 			providerOrderDescripition:
@@ -45,7 +41,7 @@ const ProviderCards = () => {
 		},
 		{
 			eventKey: '3',
-			title: 'Perscribed: Tylenol, 650 mg',
+			title: 'Covid Teat',
 			statusBtnText: 'Complete',
 			providerOrders: 'Provider Orders',
 			providerOrderDescripition:
@@ -170,4 +166,4 @@ const ProviderCards = () => {
 	)
 }
 
-export default ProviderCards
+export default NurseVisitItemProgress

@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button'
 import { LinkContainer } from 'react-router-bootstrap'
 import './NavBar.css'
 import IMAGES from '../../assets/images'
-import RequestVisitModal from '../../features/VisitsArchive/RequestVisitModal'
+import RequestVisitModal from '../../features/NurseVisitArchive/RequestVisitModal'
 
 export default function NavBar() {
 	const [showModal, setShowModal] = useState(false)
@@ -31,7 +31,7 @@ export default function NavBar() {
 						</Nav.Item>
 						<Nav.Item className='px-0 px-md-4'>
 							<Button
-								className='btn-primary-custom'
+								className='btn btn-warning btn-lg'
 								variant='primary'
 								onClick={() => setShowModal(true)}
 							>

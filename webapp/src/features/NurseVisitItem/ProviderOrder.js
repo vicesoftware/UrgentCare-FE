@@ -1,8 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
-import ProviderCards from './ProviderCards'
 
-const ProviderOrders = () => {
+const NurseVisitProviderOrders = () => {
 	return (
 		<>
 			<Row className='mb-20'>
@@ -12,9 +11,8 @@ const ProviderOrders = () => {
 					</h3>
 				</Col>
 			</Row>
-			<ProviderCards />
 		</>
 	)
 }
 
-export default ProviderOrders
+export default NurseVisitProviderOrders

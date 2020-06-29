@@ -1,10 +1,9 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Page from './widgets/Page/Page'
-import VisitsArchive from './features/VisitsArchive'
-import VisitsProvider from './features/VisitsProvider'
+import NurseVisitArchive from './features/NurseVisitArchive'
 import Settings from './features/Settings/Settings'
-
+import NurseVisitItem from './features/NurseVisitItem'
 export default function Routes() {
 	return (
 		<Switch>
@@ -12,10 +11,10 @@ export default function Routes() {
 				<Settings />
 			</PageRoute>
 			<PageRoute path='/nurse/visit/:id'>
-				<VisitsProvider />
+				<NurseVisitItem />
 			</PageRoute>
 			<PageRoute path='/nurse/visit'>
-				<VisitsArchive />
+				<NurseVisitArchive />
 			</PageRoute>
 		</Switch>
 	)

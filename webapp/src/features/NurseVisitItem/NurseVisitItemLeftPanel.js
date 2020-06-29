@@ -1,54 +1,37 @@
 import React from 'react'
-import { Col, Card, ListGroup } from 'react-bootstrap'
+import { Col, Card, ListGroup, button } from 'react-bootstrap'
 
-const PatientBasicCheckUp = ({ Edit }) => {
+const NurseVisitItemLeftPanel = ({ Edit }) => {
 	const mockPatientData = [
 		{
 			title: 'Date of Birth',
 			descripition: 'April 5, 1988',
 		},
 		{
-			title: 'Birth Sex',
+			title: 'Biological Sex',
 			descripition: 'Male',
 		},
 		{
-			title: 'Allergies',
-			descripition: 'Peanuts Seasonal',
+			title: 'Height',
+			descripition: '5.9',
 		},
 		{
-			title: 'Known Medications',
-			descripition: 'Flonase',
+			title: 'Weight',
+			descripition: '170 lbs',
 		},
 		{
-			title: 'Known Conditions',
-			descripition: 'N/A',
-		},
-		{
-			title: 'Reason for Visit',
+			title: 'Reason For Visit',
 			descripition: 'Nausea',
 		},
-		{
-			title: 'Additional Notes',
-			descripition: 'N/A',
-		},
 	]
-
 	const mockCheckUpData = [
 		{
 			vitalSign: 'Body Temprature',
 			value: 98.5 + 'F',
 		},
 		{
-			vitalSign: 'Weight',
-			value: 145 + 'LBS/' + 65.7 + 'KG',
-		},
-		{
 			vitalSign: 'Pulse rate',
 			value: 70 + 'BPM',
-		},
-		{
-			vitalSign: 'Pulse OX',
-			value: 95 + '%',
 		},
 		{
 			vitalSign: 'Respiration Rate',
@@ -59,7 +42,6 @@ const PatientBasicCheckUp = ({ Edit }) => {
 			value: 120 / 80,
 		},
 	]
-
 	return (
 		<Card className='shadow-sm border-0 mb-30'>
 			<Card.Body className='p-20'>
@@ -67,7 +49,13 @@ const PatientBasicCheckUp = ({ Edit }) => {
 					<Card.Title className='font-weight-bold gotham lh-25 d-block mb-10 f-18'>
 						Cody Miles
 					</Card.Title>
-					{Edit}
+					<button
+						className='btn-link btn f-14 font-weight-bold ml-auto btn-auto p-0'
+						data-target='#vital-sign-modal'
+						data-toggle='modal'
+					>
+						Edit
+					</button>
 				</div>
 				<ListGroup variant='flush' as='ul' className='mb-30'>
 					{mockPatientData.map((each) => (
@@ -89,7 +77,13 @@ const PatientBasicCheckUp = ({ Edit }) => {
 					<Card.Title className='font-weight-bold lh-25 mb-0 f-18'>
 						Patient Vital Signs
 					</Card.Title>
-					{Edit}
+					<button
+						className='btn-link btn f-14 font-weight-bold ml-auto btn-auto p-0'
+						data-target='#vital-sign-modal'
+						data-toggle='modal'
+					>
+						Edit
+					</button>
 				</div>
 				<ListGroup variant='flush' as='ul' className='mb-0'>
 					{mockCheckUpData.map((each) => (
@@ -111,5 +105,4 @@ const PatientBasicCheckUp = ({ Edit }) => {
 		</Card>
 	)
 }
-
-export default PatientBasicCheckUp
+export default NurseVisitItemLeftPanel

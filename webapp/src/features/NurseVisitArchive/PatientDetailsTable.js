@@ -17,15 +17,40 @@ const PatientDetailsTable = () => {
 
 	const patientDetails = useSelector(selectPatientDetails)
 
-	const completeButton = () => (
-		<Button
-			size='md'
-			className='f-14 font-weight-bold'
-			variant='outline-success'
-		>
-			Complete
-		</Button>
-	)
+	const completeButton = (status) => {
+		switch (status) {
+			case 'IN_PROGRESS':
+				return (
+					<Button
+						size='md'
+						className='f-14 font-weight-bold'
+						variant='outline-danger'
+					>
+						In Progress
+					</Button>
+				)
+			case 'IN_WAITING':
+				return (
+					<Button
+						size='md'
+						className='f-14 font-weight-bold'
+						variant='outline-warning'
+					>
+						Waiting
+					</Button>
+				)
+			default:
+				return (
+					<Button
+						size='md'
+						className='f-14 font-weight-bold'
+						variant='outline-success'
+					>
+						Complete
+					</Button>
+				)
+		}
+	}
 
 	const viewButton = (id) => (
 		<Button
@@ -40,22 +65,41 @@ const PatientDetailsTable = () => {
 
 	const columns = [
 		{ dataField: 'patientName', text: 'Patient Name', sort: true },
+
 		{
-			dataField: 'visitDate',
-			text: 'Visit Date',
+			dataField: 'Campus',
+			text: 'Campus',
 			sort: true,
 		},
+		{
+			dataField: 'State',
+			text: 'State',
+			sort: true,
+		},
+
 		{
 			dataField: 'visitReason',
 			text: 'Visit Reason',
 			sort: true,
 		},
 		{
-			dataField: 'visitStatus',
-			text: 'Visit Status',
+			dataField: 'Language',
+			text: 'Language',
+			sort: true,
+		},
+		{
+			dataField: 'TotalTime',
+			text: 'Total Time',
+
+			sort: true,
+		},
+		{
+			dataField: 'status',
+			text: 'status',
 			formatter: completeButton,
 			sort: true,
 		},
+
 		{
 			dataField: 'id',
 			text: '',
