@@ -5,6 +5,6 @@ export const { name, reducer } = slice
 
 export const {
 	selectIsAuthenticated,
-	selectCurrentUserHasPermissions,
+	// selectCurrentUserHasPermissions,
 	selectUserContext,
 } = selectors
