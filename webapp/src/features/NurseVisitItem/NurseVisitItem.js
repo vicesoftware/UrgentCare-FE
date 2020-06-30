@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Container } from 'react-bootstrap'
 import NurseVisitItemLeftPanel from './NurseVisitItemLeftPanel'
 import VisitActivity from './VisitActivity'
 import NurseVisitItemCompleted from './NurseVisitItemCompleted'
@@ -11,6 +11,7 @@ import RightPanel from './RightPanel'
 const activeStatus = NURSE_VISITS_ITEM_STATUS.COMPLETE
 
 const NurseVisitItem = () => {
+<<<<<<< HEAD
 	const getNurseVisitMiddlePanel = (status) => {
 		switch (status) {
 			case NURSE_VISITS_ITEM_STATUS.IN_PROGRESS:
@@ -19,10 +20,20 @@ const NurseVisitItem = () => {
 				return <NurseVisitItemWaiting />
 			default:
 				return <NurseVisitItemCompleted />
+=======
+	const NurseVisitMiddleItem = (status) => {
+		switch (status) {
+			case NURSE_VISITS_ITEM_STATUS.IN_PROGRESS:
+				return <CenterPanelProgress />
+			case NURSE_VISITS_ITEM_STATUS.WAITING:
+				return <NurseVisitItemWaiting />
+			default:
+				return <CenterPanelCompleted />
+>>>>>>> 071d8209bc3635c7f02e5f5fbf9db007e811be72
 		}
 	}
 	return (
-		<div className='container-fluid'>
+		<Container fluid>
 			<Row>
 				<Col
 					xl={{ span: 3, order: 1 }}
@@ -33,7 +44,11 @@ const NurseVisitItem = () => {
 					<VisitActivity />
 				</Col>
 				<Col xl={{ span: 6, order: 2 }} xs={{ span: 12, order: 1 }}>
+<<<<<<< HEAD
 					{getNurseVisitMiddlePanel(NURSE_VISITS_ITEM_STATUS.COMPLETE)}
+=======
+					{NurseVisitMiddleItem(NURSE_VISITS_ITEM_STATUS.COMPLETE)}
+>>>>>>> 071d8209bc3635c7f02e5f5fbf9db007e811be72
 				</Col>
 				<Col
 					xl={{ span: 3, order: 3 }}
@@ -43,7 +58,7 @@ const NurseVisitItem = () => {
 					<RightPanel status={activeStatus} />
 				</Col>
 			</Row>
-		</div>
+		</Container>
 	)
 }
 export default NurseVisitItem
