@@ -1,0 +1,28 @@
+.column-header {
+	background-color: #428ec2 !important;
+	color: white;
+}
+.column-header th {
+	border: none !important;
+	padding: 15px 20px !important;
+}
+.text-table-data {
+	font-weight: 600;
+	color: #4c4c4c;
+}
+.text-table-data td {
+	padding: 7px 20px;
+	vertical-align: unset;
+}
+.table td {
+	border: none !important;
+}
+.table-striped tbody tr:nth-of-type(even) {
+	background-color: #fbfbfe;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+	background-color: white;
+}
+.align-item-right {
+	text-align: right;
+}
