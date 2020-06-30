@@ -30,7 +30,7 @@
   "scripts": {
     "start": "npm run pretty && npm run eslint && npm run start-watch",
     "start-watch": "concurrently --kill-others \"npm run prettier-watch\" \"npm run eslint-watch\" \"react-app-rewired start --no-cache\"",
-    "build": "react-app-rewired build",
+    "build": "npm install && react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "pretty": "npx prettier --write \"src/**/*.js\" \"src/**/*.css\"",
