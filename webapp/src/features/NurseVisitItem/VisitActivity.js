@@ -1,7 +1,6 @@
 import React from 'react'
 import { Col, Card, ListGroup } from 'react-bootstrap'
 import './NurseVisitItem.css'
-
 const VisitActivity = () => {
 	var date = new Date()
 	var fullTime = date.toLocaleString('en-US', {
@@ -9,7 +8,6 @@ const VisitActivity = () => {
 		minute: 'numeric',
 		hour12: true,
 	})
-
 	const mockActivity = [
 		{
 			time: fullTime,
@@ -58,5 +56,4 @@ const VisitActivity = () => {
 		</Card>
 	)
 }
-
 export default VisitActivity

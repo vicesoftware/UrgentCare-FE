@@ -2,8 +2,7 @@ import React from 'react'
 import { Row, Col, Card, Button, Image, Accordion } from 'react-bootstrap'
 import Icons from '../../assets/icons'
 import classNames from 'classnames'
-
-const NurseVisitItemProgress = () => {
+const NurseVisitItemPanelProgress = () => {
 	const mockData = [
 		{
 			eventKey: '0',
@@ -166,4 +165,4 @@ const NurseVisitItemProgress = () => {
 	)
 }
 
-export default NurseVisitItemProgress
+export default NurseVisitItemPanelProgress

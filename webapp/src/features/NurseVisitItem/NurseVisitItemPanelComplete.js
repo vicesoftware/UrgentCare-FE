@@ -2,11 +2,9 @@ import React from 'react'
 import { Row, Col, Card, Button, Image, Accordion } from 'react-bootstrap'
 import Icons from '../../assets/icons'
 import classNames from 'classnames'
-
 const NurseVisitItemComplete = () => {
-	const mockData = [
+	const mockCompleteData = [
 		{
-			eventKey: '0',
 			title: 'Perform COVID Test',
 			statusBtnText: 'Negative',
 			providerOrders: 'Provider Orders',
@@ -21,7 +19,6 @@ const NurseVisitItemComplete = () => {
 			actionBtnText: 'Save',
 		},
 		{
-			eventKey: '1',
 			title: 'Perform a Step Test',
 			statusBtnText: 'Complete',
 			providerOrders: 'Provider Orders',
@@ -32,7 +29,6 @@ const NurseVisitItemComplete = () => {
 			actionBtnText: 'Complete Order',
 		},
 		{
-			eventKey: '2',
 			title: 'Perscribed: Tylenol, 650 mg',
 			statusBtnText: 'Complete',
 			providerOrders: 'Provider Orders',
@@ -44,7 +40,6 @@ const NurseVisitItemComplete = () => {
 			actionBtnText: 'Edit now',
 		},
 		{
-			eventKey: '3',
 			title: 'Perscribed: Tylenol, 650 mg',
 			statusBtnText: 'Complete',
 			providerOrders: 'Provider Orders',
@@ -58,7 +53,7 @@ const NurseVisitItemComplete = () => {
 	]
 	return (
 		<Card className='border-0  mb-20 bg-light'>
-			{mockData.map((each) => (
+			{mockCompleteData.map((each) => (
 				<Card.Body
 					className='p-20 shadow-sm mb-4 rounded bg-white'
 					key={each.title}
@@ -86,7 +81,6 @@ const NurseVisitItemComplete = () => {
 							<Accordion.Toggle
 								className='btn-expand f-14 btn btn-link btn-auto p-0 font-weight-bold d-flex align-items-center text-light'
 								variant='link'
-								eventKey={each.eventKey}
 							>
 								More Details
 								<Image
@@ -96,7 +90,7 @@ const NurseVisitItemComplete = () => {
 									width='15'
 								></Image>
 							</Accordion.Toggle>
-							<Accordion.Collapse eventKey={each.eventKey} className='col-12'>
+							<Accordion.Collapse className='col-12'>
 								<Card.Body className='p-0'>
 									<div className=''>
 										<div>

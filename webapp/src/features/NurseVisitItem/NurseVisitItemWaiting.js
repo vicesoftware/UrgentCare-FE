@@ -1,7 +1,6 @@
 import React from 'react'
 import { Card, Image } from 'react-bootstrap'
 import IMAGES from '../../assets/images'
-
 const NurseVisitItemWaiting = () => {
 	return (
 		<div>

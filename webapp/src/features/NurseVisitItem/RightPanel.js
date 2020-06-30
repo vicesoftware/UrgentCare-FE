@@ -3,7 +3,7 @@ import { Card, Button } from 'react-bootstrap'
 import { NURSE_VISITS_ITEM_STATUS } from './NurseVisitItem.constants'
 import classNames from 'classnames'
 const RightPanel = ({ status }) => {
-	const NurseVisitRightPanel = (status) => {
+	const getNurseVisitRightPanel = (status) => {
 		switch (status) {
 			case NURSE_VISITS_ITEM_STATUS.IN_PROGRESS:
 				return (
@@ -11,7 +11,6 @@ const RightPanel = ({ status }) => {
 						cancel visit request
 					</Button>
 				)
-
 			case NURSE_VISITS_ITEM_STATUS.WAITING:
 				return (
 					<Button className='btn btn-danger mb-30 btn-block' variant='danger'>
@@ -41,14 +40,12 @@ const RightPanel = ({ status }) => {
 				)
 		}
 	}
-
 	return (
 		<Card className='border-0 shadow-sm mb-30'>
 			<Card.Body className='px-20 py-15'>
 				<Card.Text className='d-flex f-14'>
 					<div className='flex-fill'>
-						{NurseVisitRightPanel()}
-
+						{getNurseVisitRightPanel()}
 						<div className='d-flex f-14'>
 							<div className='flex-fill'>
 								<strong className='opacity-50'>Visit Status</strong>
@@ -66,7 +63,6 @@ const RightPanel = ({ status }) => {
 										}
 									)}
 								></span>
-
 								<span>{status}</span>
 							</div>
 						</div>
