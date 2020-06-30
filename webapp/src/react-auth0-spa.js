@@ -36,8 +36,10 @@ export const Auth0Provider = ({
 				onRedirectCallback(appState)
 			}
 			const isAuthenticated = await auth0FromHook.isAuthenticated()
+			debugger
 			dispatch(setIsAuthenticated(isAuthenticated))
 			if (isAuthenticated) {
+				debugger
 				const user = await auth0FromHook.getUser()
 				const token = await auth0FromHook.getTokenSilently()
 				dispatch(setJwtToken(token))

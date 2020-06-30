@@ -9,10 +9,17 @@ import IMAGES from '../../assets/images'
 
 export default function NavBar() {
 	const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0()
+	debugger
 	return (
 		<Navbar bg='white' expand='lg' className='static-top p-0'>
 			<div className='container-fluid'>
-				<LinkContainer to='/'>
+				<LinkContainer
+					to={
+						user && user.name === 'Vice Provider'
+							? '/dashboard'
+							: '/nurse/visits'
+					}
+				>
 					<Navbar.Brand className='pt-0 mr-15'>
 						<img src={IMAGES.logoCircle} alt='' width='53' />
 					</Navbar.Brand>
@@ -23,16 +30,31 @@ export default function NavBar() {
 				/>
 				<Navbar.Collapse>
 					<Nav className='mr-auto align-items-lg-center '>
+						{user && user.name === 'Vice Provider' && (
+							<Nav.Item>
+								<LinkContainer to='/dashboard'>
+									<Nav.Link>Dashboard</Nav.Link>
+								</LinkContainer>
+							</Nav.Item>
+						)}
 						<Nav.Item>
-							<LinkContainer to='/nurse/visits'>
+							<LinkContainer
+								to={
+									user && user.name === 'Vice Provider'
+										? '/dashboard'
+										: '/nurse/visits'
+								}
+							>
 								<Nav.Link>Visits</Nav.Link>
 							</LinkContainer>
 						</Nav.Item>
-						<Nav.Item className='px-0 px-md-4'>
-							<Button className='btn btn-warning btn-lg' variant='primary'>
-								Request Visit
-							</Button>
-						</Nav.Item>
+						{user && user.name !== 'Vice Provider' && (
+							<Nav.Item className='px-0 px-md-4'>
+								<Button className='btn btn-warning btn-lg' variant='primary'>
+									Request Visit
+								</Button>
+							</Nav.Item>
+						)}
 					</Nav>
 					<Nav className='nav-bar-right '>
 						<Nav.Item className='px-0 px-md-4'>
