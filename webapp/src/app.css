@@ -394,3 +394,6 @@ select.form-control {
 .error {
 	color: red;
 }
+.error-message {
+	color: #d0021b;
+}

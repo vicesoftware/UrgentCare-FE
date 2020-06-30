@@ -10,7 +10,7 @@ const slice = createSlice({
 
 	extraReducers: {
 		[asyncActions.fetchNurseVisits.fulfilled]: (state, action) => {
-			state.nurseVisits = action.payload
+			state.nurseVisits = action.payload || initialState.nurseVisits
 		},
 	},
 })
