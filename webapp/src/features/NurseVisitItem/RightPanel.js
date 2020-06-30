@@ -8,7 +8,7 @@ const RightPanel = ({ status }) => {
 			case NURSE_VISITS_ITEM_STATUS.IN_PROGRESS:
 				return (
 					<Button className='btn btn-danger mb-30 btn-block' variant='danger'>
-						cancel visit request
+						Cancel Visit Request
 					</Button>
 				)
 			case NURSE_VISITS_ITEM_STATUS.WAITING:
@@ -45,7 +45,7 @@ const RightPanel = ({ status }) => {
 			<Card.Body className='px-20 py-15'>
 				<Card.Text className='d-flex f-14'>
 					<div className='flex-fill'>
-						{getNurseVisitRightPanel()}
+						{getNurseVisitRightPanel(status)}
 
 						<div className='d-flex f-14'>
 							<div className='flex-fill'>

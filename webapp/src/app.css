@@ -397,3 +397,9 @@ select.form-control {
 .error-message {
 	color: #d0021b;
 }
+
+.alert-danger {
+	color: #c72127;
+	background-color: rgba(199, 33, 39, 0.75);
+	border-color: #c72127;
+}
