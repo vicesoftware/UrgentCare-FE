@@ -10,11 +10,11 @@ function App() {
 	return (
 		<Router>
 			<NavBar />
-			<div className='page bg-light'>
+			<main className='page bg-light'>
 				<NotificationPopup />
 				<Routes />
-				<Footer />
-			</div>
+			</main>
+			<Footer />
 		</Router>
 	)
 }

@@ -1,7 +1,8 @@
 import React from 'react'
 import { Col, Card, ListGroup } from 'react-bootstrap'
 import './NurseVisitItem.css'
-const VisitActivity = () => {
+
+const VisitActivity = ({ ViewAll }) => {
 	var date = new Date()
 	var fullTime = date.toLocaleString('en-US', {
 		hour: 'numeric',
@@ -35,6 +36,7 @@ const VisitActivity = () => {
 			<Card.Body className='p-20'>
 				<Card.Title className='font-weight-bold gotham lh-25 d-block mb-10 f-18'>
 					Visit Activity
+					{ViewAll}
 				</Card.Title>
 				<ListGroup variant='flush' as='ul'>
 					{mockActivity.map((each) => (

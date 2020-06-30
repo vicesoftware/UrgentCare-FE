@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col, Card, ListGroup } from 'react-bootstrap'
+
 const NurseVisitItemLeftPanel = ({ Edit }) => {
 	const mockPatientData = [
 		{

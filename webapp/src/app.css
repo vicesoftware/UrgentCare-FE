@@ -1,7 +1,9 @@
 .page {
 	padding-top: 25px;
 }
-
+main {
+	min-height: calc(100vh - 147px);
+}
 @font-face {
 	font-family: 'Stolzl';
 	src: url('./assets/fonts/stolzl/Stolzl-Light.eot');

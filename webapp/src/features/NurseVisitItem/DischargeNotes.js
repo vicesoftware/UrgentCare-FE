@@ -1,5 +1,6 @@
 import React from 'react'
 import { Row, Col, Card, Accordion } from 'react-bootstrap'
+
 const DischargeNotes = () => {
 	const mockData = [
 		{

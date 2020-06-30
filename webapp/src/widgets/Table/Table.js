@@ -9,7 +9,7 @@ const Table = ({ columns, data = [], keyField }) => {
 			keyField={keyField}
 			data={data}
 			columns={columns}
-			wrapperClasses='table-responsive mb-25'
+			wrapperClasses='table-responsive'
 			rowClasses='text-table-data'
 			headerClasses='column-header'
 			classes='font-weight-normal f-14 table-striped'

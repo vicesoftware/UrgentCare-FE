@@ -2,6 +2,7 @@ import React from 'react'
 import { Card, Button } from 'react-bootstrap'
 import { NURSE_VISITS_ITEM_STATUS } from './NurseVisitItem.constants'
 import classNames from 'classnames'
+
 const RightPanel = ({ status }) => {
 	const getNurseVisitRightPanel = (status) => {
 		switch (status) {
