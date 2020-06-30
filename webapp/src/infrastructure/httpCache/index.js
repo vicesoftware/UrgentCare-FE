@@ -8,8 +8,8 @@ export const {
 } = slice
 
 export const {
-	isExpired,
-	getRequestCache,
+	// isExpired,
+	// getRequestCache,
 	tryToFindRequestInCache,
 	CACHE_TIMEOUT,
 } = selectors
