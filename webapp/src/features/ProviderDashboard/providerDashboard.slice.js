@@ -1,17 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
 	selectedVisitId: '',
-	selectedModal: null,
+	selectedProviderDashboardModal: null,
 }
 const slice = createSlice({
-	name: 'dashboardProvider',
+	name: 'providerdashboard',
 	initialState,
 	reducers: {
 		saveSelectedVisitId(state, action) {
 			state.selectedVisitId = action.payload
 		},
-		setSelectedModal(state, action) {
-			state.selectedModal = action.payload
+		setSelectedProviderDashboardModal(state, action) {
+			state.selectedProviderDashboardModal = action.payload
 		},
 	},
 	extraReducers: {},

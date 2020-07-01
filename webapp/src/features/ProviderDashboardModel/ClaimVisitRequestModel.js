@@ -1,27 +1,24 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Modal, { hideModal, showModal } from '../../widgets/modal'
-import { actions } from '../DashboardProvider/dashboardProvider.slice'
+import { actions } from '../ProviderDashboard/providerDashboard.slice'
 import { Button, Col, ListGroup } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
-import { selectVisitId } from '../DashboardProvider/dashboardProvider.selector'
-const { setSelectedModal } = actions
+import { selectselectedVisitId } from '../ProviderDashboard/providerDashboard.selector'
+const { setSelectedProviderDashboardModal } = actions
 
-const DashboardProviderModal = () => {
+const ClaimVisitRequestModel = () => {
 	const history = useHistory()
-	const id = useSelector(selectVisitId)
+	const id = useSelector(selectselectedVisitId)
 	const dispatch = useDispatch()
-	const resetModal = () => dispatch(setSelectedModal(null))
-
+	const resetModal = () => dispatch(setSelectedProviderDashboardModal(null))
 	useEffect(() => {
 		dispatch(showModal())
 	})
-
 	const handleClose = () => {
 		dispatch(hideModal())
 		resetModal()
 	}
-
 	const mockPatientData = [
 		{
 			title: 'Date of Birth',
@@ -52,7 +49,6 @@ const DashboardProviderModal = () => {
 			descripition: 'N/A',
 		},
 	]
-
 	const mockCheckUpData = [
 		{
 			vitalSign: 'Body Temprature',
@@ -79,7 +75,6 @@ const DashboardProviderModal = () => {
 			value: 120 / 80,
 		},
 	]
-
 	const footer = (
 		<>
 			<Button
@@ -89,7 +84,6 @@ const DashboardProviderModal = () => {
 			>
 				Claim Visit
 			</Button>
-
 			<Button
 				type='button'
 				variant='light'
@@ -165,4 +159,4 @@ const DashboardProviderModal = () => {
 	)
 }
 
-export default DashboardProviderModal
+export default ClaimVisitRequestModel

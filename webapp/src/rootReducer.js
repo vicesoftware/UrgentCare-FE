@@ -6,7 +6,7 @@ import * as notificationPopup from './infrastructure/notificationPopup'
 import * as httpCache from './infrastructure/httpCache'
 import * as NurseVisit from './features/NurseVisit'
 import * as VisitsArchive from './features/VisitsArchive'
-import * as DashboardProvider from './features/DashboardProvider'
+import * as ProviderDashboard from './features/ProviderDashboard'
 
 export default combineReducers({
 	[busyIndicator.name]: busyIndicator.reducer,
@@ -16,5 +16,5 @@ export default combineReducers({
 	[httpCache.name]: httpCache.reducer,
 	[NurseVisit.name]: NurseVisit.reducer,
 	[VisitsArchive.name]: VisitsArchive.reducer,
-	[DashboardProvider.name]: DashboardProvider.reducer,
+	[ProviderDashboard.name]: ProviderDashboard.reducer,
 })

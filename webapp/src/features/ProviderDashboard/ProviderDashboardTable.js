@@ -1,18 +1,17 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { actions } from './dashboardProvider.slice'
-import { selectModal } from './dashboardProvider.selector'
-import { DASHBOARD_PROVIDER_MODAL } from '../DashboardProviderModal/dashboardProvider.constants'
-import getDashboardProviderModal from '../DashboardProviderModal/index'
+import { actions } from './providerDashboard.slice'
+import { selectSelectedProviderDashboardModal } from './providerDashboard.selector'
+import { PROVIDER_DASHBOARD_MODEL } from '../ProviderDashboardModel/providerDashboardModel.constants'
+import getProviderDashboardModal from '../ProviderDashboardModel/index'
 import Button from 'react-bootstrap/Button'
 import Table from '../../widgets/Table'
-const { saveSelectedVisitId, setSelectedModal } = actions
-
-const TableDashboard = () => {
-	const selectedModal = useSelector(selectModal)
-
+const { saveSelectedVisitId, setSelectedProviderDashboardModal } = actions
+const ProviderDashboardTable = () => {
+	const selectedProviderDashboardModal = useSelector(
+		selectSelectedProviderDashboardModal
+	)
 	const dispatch = useDispatch()
-
 	const mockDetails = [
 		{
 			patientName: 'Cody Miles',
@@ -123,25 +122,23 @@ const TableDashboard = () => {
 			{status}
 		</Button>
 	)
-
-	const viewFormatter = (id) => {
-		return (
-			<Button
-				id='viewButton'
-				size='md'
-				className='font-weight-normal btn-light align-right'
-				onClick={() => {
-					dispatch(saveSelectedVisitId(id))
-					dispatch(
-						setSelectedModal(DASHBOARD_PROVIDER_MODAL.CANCEL_CLAIM_REQUEST)
+	const viewFormatter = (id) => (
+		<Button
+			id='viewButton'
+			size='md'
+			className='font-weight-normal btn-light align-right'
+			onClick={() => {
+				dispatch(saveSelectedVisitId(id))
+				dispatch(
+					setSelectedProviderDashboardModal(
+						PROVIDER_DASHBOARD_MODEL.CLAIM_VISIT_REQUEST
 					)
-				}}
-			>
-				View
-			</Button>
-		)
-	}
-
+				)
+			}}
+		>
+			View
+		</Button>
+	)
 	const columns = [
 		{
 			dataField: 'patientName',
@@ -186,15 +183,14 @@ const TableDashboard = () => {
 			classes: 'align-item-right',
 		},
 	]
-
 	return (
 		<>
-			{selectedModal && getDashboardProviderModal(selectedModal)}
+			{selectedProviderDashboardModal &&
+				getProviderDashboardModal(selectedProviderDashboardModal)}
 			<div className='border-4'>
 				<Table keyField='id' columns={columns} data={mockDetails} />
 			</div>
 		</>
 	)
 }
-
-export default TableDashboard
+export default ProviderDashboardTable

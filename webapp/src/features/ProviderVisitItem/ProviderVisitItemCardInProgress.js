@@ -3,15 +3,26 @@ import { Row, Col, Card, Button, Image, Accordion } from 'react-bootstrap'
 import Icons from '../../assets/icons'
 import classNames from 'classnames'
 
-const CardCenterComplete = () => {
-	const mockData = [
+const ProviderVisitItemCardInProgress = () => {
+	const patientDiagnosisData = [
 		{
 			eventKey: '0',
-			title: 'Perform COVID Test',
+			title: 'Step Test',
+			statusBtnText: 'Complete',
+			providerOrders: 'Provider Orders',
+			providerOrderDescripition:
+				'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident',
+			documentAdministration: 'Please Provide Administration Documentation:',
+			documentAdministrationContent: '',
+			actionBtnText: 'Complete Order',
+		},
+		{
+			eventKey: '1',
+			title: 'Perform Covid Test',
 			statusBtnText: 'Negative',
 			providerOrders: 'Provider Orders',
 			providerOrderDescripition:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
 			documentAdministration: 'Document Administration',
 			documentAdministrationContent:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -19,17 +30,6 @@ const CardCenterComplete = () => {
 			followUpInstructionContent:
 				'The following instructions will be appended to your provider note',
 			actionBtnText: 'Save',
-		},
-		{
-			eventKey: '1',
-			title: 'Perform a Step Test',
-			statusBtnText: 'Complete',
-			providerOrders: 'Provider Orders',
-			providerOrderDescripition:
-				'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.',
-			documentAdministration: 'Please Provide Administration Documentation:',
-			documentAdministrationContent: '',
-			actionBtnText: 'Complete Order',
 		},
 		{
 			eventKey: '2',
@@ -41,24 +41,37 @@ const CardCenterComplete = () => {
 			documentAdministration: 'Document Administration',
 			documentAdministrationContent:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-			actionBtnText: 'Edit now',
+			actionBtnText: 'Edit note',
 		},
 		{
 			eventKey: '3',
 			title: 'Perscribed: Tylenol, 650 mg',
-			statusBtnText: 'Complete',
+			statusBtnText: 'InComplete',
 			providerOrders: 'Provider Orders',
 			providerOrderDescripition:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 			documentAdministration: 'Document Administration',
 			documentAdministrationContent:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-			actionBtnText: 'Edit now',
+			actionBtnText: 'Edit note',
+		},
+		{
+			eventKey: '4',
+			title: 'Perscribed: Erythromycin, 333 mg',
+			statusBtnText: 'Incomplete',
+			providerOrders: 'Provider Orders',
+			providerOrderDescripition:
+				'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.',
+			documentAdministration: 'Please Provide Document Administration',
+			documentAdministrationContent: '',
+			actionBtnText: 'Edit note',
+			BtnText: 'Remove Now',
 		},
 	]
+
 	return (
 		<Card className='border-0  mb-20 bg-light'>
-			{mockData.map((each) => (
+			{patientDiagnosisData.map((each) => (
 				<Card.Body
 					className='p-20 shadow-sm mb-4 rounded bg-white'
 					key={each.title}
@@ -70,6 +83,14 @@ const CardCenterComplete = () => {
 								className='mb-4 mb-md-0 d-flex justify-content-between'
 							>
 								<h4 className='col-xs-12 f-16 font-weight-bold mb-0'>
+									<span
+										className={classNames(
+											'status-sign d-inline-block rounded-circle mr-2',
+											{
+												'bg-primary': each.title === 'Step Test',
+											}
+										)}
+									></span>
 									{each.title}
 								</h4>
 								<Button
@@ -142,22 +163,39 @@ const CardCenterComplete = () => {
 											) : (
 												''
 											)}
-
 											<Button
 												className={classNames({
 													'btn-primary-custom':
-														each.actionBtnText === 'Edit now',
+														each.actionBtnText === 'Edit note',
 												})}
 												variant={
 													each.actionBtnText === 'Save'
 														? 'warning'
-														: each.actionBtnText === 'Edit now'
+														: each.actionBtnText === 'Edit note'
 														? 'primary'
 														: 'danger'
 												}
 											>
 												{each.actionBtnText}
-											</Button>
+											</Button>{' '}
+											{each.BtnText ? (
+												<Button
+													className={classNames({
+														'btn-primary-custom': each.BtnText === 'Edit note',
+													})}
+													variant={
+														each.BtnText === 'Save'
+															? 'warning'
+															: each.BtnText === 'Edit note'
+															? 'primary'
+															: 'danger'
+													}
+												>
+													{each.BtnText}
+												</Button>
+											) : (
+												''
+											)}
 										</div>
 									</div>
 								</Card.Body>
@@ -170,4 +208,4 @@ const CardCenterComplete = () => {
 	)
 }
 
-export default CardCenterComplete
+export default ProviderVisitItemCardInProgress

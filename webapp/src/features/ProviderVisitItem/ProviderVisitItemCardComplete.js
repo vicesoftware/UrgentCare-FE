@@ -3,26 +3,15 @@ import { Row, Col, Card, Button, Image, Accordion } from 'react-bootstrap'
 import Icons from '../../assets/icons'
 import classNames from 'classnames'
 
-const CardCenterInProgress = () => {
-	const patientDiagnosisData = [
+const ProviderVisitItemCardComplete = () => {
+	const mockData = [
 		{
 			eventKey: '0',
-			title: 'Step Test',
-			statusBtnText: 'Complete',
-			providerOrders: 'Provider Orders',
-			providerOrderDescripition:
-				'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident',
-			documentAdministration: 'Please Provide Administration Documentation:',
-			documentAdministrationContent: '',
-			actionBtnText: 'Complete Order',
-		},
-		{
-			eventKey: '1',
-			title: 'Perform Covid Test',
+			title: 'Perform COVID Test',
 			statusBtnText: 'Negative',
 			providerOrders: 'Provider Orders',
 			providerOrderDescripition:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 			documentAdministration: 'Document Administration',
 			documentAdministrationContent:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -30,6 +19,17 @@ const CardCenterInProgress = () => {
 			followUpInstructionContent:
 				'The following instructions will be appended to your provider note',
 			actionBtnText: 'Save',
+		},
+		{
+			eventKey: '1',
+			title: 'Perform a Step Test',
+			statusBtnText: 'Complete',
+			providerOrders: 'Provider Orders',
+			providerOrderDescripition:
+				'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.',
+			documentAdministration: 'Please Provide Administration Documentation:',
+			documentAdministrationContent: '',
+			actionBtnText: 'Complete Order',
 		},
 		{
 			eventKey: '2',
@@ -41,37 +41,24 @@ const CardCenterInProgress = () => {
 			documentAdministration: 'Document Administration',
 			documentAdministrationContent:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-			actionBtnText: 'Edit note',
+			actionBtnText: 'Edit now',
 		},
 		{
 			eventKey: '3',
 			title: 'Perscribed: Tylenol, 650 mg',
-			statusBtnText: 'InComplete',
+			statusBtnText: 'Complete',
 			providerOrders: 'Provider Orders',
 			providerOrderDescripition:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 			documentAdministration: 'Document Administration',
 			documentAdministrationContent:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-			actionBtnText: 'Edit note',
-		},
-		{
-			eventKey: '4',
-			title: 'Perscribed: Erythromycin, 333 mg',
-			statusBtnText: 'Incomplete',
-			providerOrders: 'Provider Orders',
-			providerOrderDescripition:
-				'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.',
-			documentAdministration: 'Please Provide Document Administration',
-			documentAdministrationContent: '',
-			actionBtnText: 'Edit note',
-			BtnText: 'Remove Now',
+			actionBtnText: 'Edit now',
 		},
 	]
-
 	return (
 		<Card className='border-0  mb-20 bg-light'>
-			{patientDiagnosisData.map((each) => (
+			{mockData.map((each) => (
 				<Card.Body
 					className='p-20 shadow-sm mb-4 rounded bg-white'
 					key={each.title}
@@ -155,39 +142,22 @@ const CardCenterInProgress = () => {
 											) : (
 												''
 											)}
+
 											<Button
 												className={classNames({
 													'btn-primary-custom':
-														each.actionBtnText === 'Edit note',
+														each.actionBtnText === 'Edit now',
 												})}
 												variant={
 													each.actionBtnText === 'Save'
 														? 'warning'
-														: each.actionBtnText === 'Edit note'
+														: each.actionBtnText === 'Edit now'
 														? 'primary'
 														: 'danger'
 												}
 											>
 												{each.actionBtnText}
-											</Button>{' '}
-											{each.BtnText ? (
-												<Button
-													className={classNames({
-														'btn-primary-custom': each.BtnText === 'Edit note',
-													})}
-													variant={
-														each.BtnText === 'Save'
-															? 'warning'
-															: each.BtnText === 'Edit note'
-															? 'primary'
-															: 'danger'
-													}
-												>
-													{each.BtnText}
-												</Button>
-											) : (
-												''
-											)}
+											</Button>
 										</div>
 									</div>
 								</Card.Body>
@@ -200,4 +170,4 @@ const CardCenterInProgress = () => {
 	)
 }
 
-export default CardCenterInProgress
+export default ProviderVisitItemCardComplete

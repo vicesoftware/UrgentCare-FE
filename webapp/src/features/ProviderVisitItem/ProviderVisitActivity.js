@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col, Card, ListGroup } from 'react-bootstrap'
 
-const LeftPanelActivity = () => {
+const ProviderVisitActivity = () => {
 	var date = new Date()
 	var fullTime = date.toLocaleString('en-US', {
 		hour: 'numeric',
@@ -9,7 +9,7 @@ const LeftPanelActivity = () => {
 		hour12: true,
 	})
 
-	const mockActivity = [
+	const mockActivityData = [
 		{
 			time: fullTime,
 			activity: 'Provider Perscribed Tylenol',
@@ -38,7 +38,7 @@ const LeftPanelActivity = () => {
 					Visit Activity
 				</Card.Title>
 				<ListGroup variant='flush' as='ul'>
-					{mockActivity.map((each) => (
+					{mockActivityData.map((each) => (
 						<ListGroup.Item
 							key={each.activity}
 							as='li'
@@ -58,4 +58,4 @@ const LeftPanelActivity = () => {
 	)
 }
 
-export default LeftPanelActivity
+export default ProviderVisitActivity

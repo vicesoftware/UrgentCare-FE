@@ -1,8 +1,7 @@
 import React from 'react'
 import { Col, Card, ListGroup } from 'react-bootstrap'
-
-const LeftPanelDetails = ({ Edit }) => {
-	const mockPatientData = [
+const PatientCheckUpDetails = ({ Edit }) => {
+	const mockProviderVisitDetails = [
 		{
 			title: 'Date of Birth',
 			descripition: 'April 5, 1988',
@@ -32,8 +31,7 @@ const LeftPanelDetails = ({ Edit }) => {
 			descripition: 'N/A',
 		},
 	]
-
-	const mockCheckUpData = [
+	const mockProviderVisitCheckUpData = [
 		{
 			vitalSign: 'Body Temprature',
 			value: 98.5 + 'F',
@@ -59,7 +57,6 @@ const LeftPanelDetails = ({ Edit }) => {
 			value: 120 / 80,
 		},
 	]
-
 	return (
 		<Card className='shadow-sm border-0 mb-30'>
 			<Card.Body className='p-20'>
@@ -70,7 +67,7 @@ const LeftPanelDetails = ({ Edit }) => {
 					{Edit}
 				</div>
 				<ListGroup variant='flush' as='ul' className='mb-30'>
-					{mockPatientData.map((each) => (
+					{mockProviderVisitDetails.map((each) => (
 						<ListGroup.Item
 							key={each.descripition}
 							as='li'
@@ -92,7 +89,7 @@ const LeftPanelDetails = ({ Edit }) => {
 					{Edit}
 				</div>
 				<ListGroup variant='flush' as='ul' className='mb-0'>
-					{mockCheckUpData.map((each) => (
+					{mockProviderVisitCheckUpData.map((each) => (
 						<ListGroup.Item
 							key={each.value}
 							as='li'
@@ -111,5 +108,4 @@ const LeftPanelDetails = ({ Edit }) => {
 		</Card>
 	)
 }
-
-export default LeftPanelDetails
+export default PatientCheckUpDetails

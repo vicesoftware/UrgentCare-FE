@@ -1,12 +1,11 @@
 import React from 'react'
-import LeftPanelActivity from './LeftPanelActivity'
-import LeftPanelDetails from './LeftPanelDetails'
-import CenterPanelInProgress from './CenterPanelInProgress'
+import ProviderVisitItemLeftPanel from './ProviderVisitItemLeftPanel'
+import ProviderVisitItemCenterPanelInProgress from './ProviderVisitItemCenterPanelInProgress'
 import { Row, Col } from 'react-bootstrap'
-import RightPanel from './RightPanel'
-import CenterPanelComplete from './CenterPanelComplete'
+import ProviderVisitItemRightPanel from './ProviderVisitItemRightPanel'
+import ProviderVisitItemCenterPanelComplete from './ProviderVisitItemCenterPanelComplete'
 import { PROVIDER_VISIT_ITEM_STATUS } from './providerVisitItem.constants'
-export default function ProviderVisit() {
+const ProviderVisitItem = () => {
 	const status = PROVIDER_VISIT_ITEM_STATUS.STATUS_IN_PROGRESS
 	return (
 		<div className='container-fluid'>
@@ -16,14 +15,13 @@ export default function ProviderVisit() {
 					lg={{ span: 6, order: 2 }}
 					xs={{ span: 12, order: 2 }}
 				>
-					<LeftPanelDetails />
-					<LeftPanelActivity />
+					<ProviderVisitItemLeftPanel />
 				</Col>
 				<Col xl={{ span: 6, order: 2 }} xs={{ span: 12, order: 1 }}>
 					{status === PROVIDER_VISIT_ITEM_STATUS.STATUS_IN_PROGRESS ? (
-						<CenterPanelInProgress />
+						<ProviderVisitItemCenterPanelInProgress />
 					) : (
-						<CenterPanelComplete />
+						<ProviderVisitItemCenterPanelComplete />
 					)}
 				</Col>
 				<Col
@@ -31,9 +29,10 @@ export default function ProviderVisit() {
 					lg={{ span: 6, order: 2 }}
 					xs={{ span: 12, order: 3 }}
 				>
-					<RightPanel status={status} />
+					<ProviderVisitItemRightPanel status={status} />
 				</Col>
 			</Row>
 		</div>
 	)
 }
+export default ProviderVisitItem

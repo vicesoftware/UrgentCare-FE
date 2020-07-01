@@ -3,25 +3,25 @@ import { Switch, Route } from 'react-router-dom'
 import Page from './widgets/Page/Page'
 import VisitsArchive from './features/VisitsArchive'
 import VisitsProvider from './features/VisitsProvider'
-import Settings from './features/Settings/Settings'
-import DashboardProvider from './features/DashboardProvider'
+import ProviderDashboard from './features/ProviderDashboard'
 import ProviderVisitItem from './features/ProviderVisitItem'
-import NurseVisit from './features/NurseVisit'
+import ProviderVisitAddMedication from './features/ProviderVisitItem/ProviderVisitAddMedication'
+import ProviderVisitAddTest from './features/ProviderVisitItem/ProviderVisitAddTest'
 
 export default function Routes() {
 	return (
 		<Switch>
-			<PageRoute path='/visit'>
-				<NurseVisit />
+			<PageRoute path='/test'>
+				<ProviderVisitAddTest />
+			</PageRoute>
+			<PageRoute path='/medication'>
+				<ProviderVisitAddMedication />
 			</PageRoute>
 			<PageRoute path='/provider/visit/:id'>
 				<ProviderVisitItem />
 			</PageRoute>
-			<PageRoute path='/dashboard/Provider'>
-				<DashboardProvider />
-			</PageRoute>
-			<PageRoute path='/settings'>
-				<Settings />
+			<PageRoute path='/provider/dashboard'>
+				<ProviderDashboard />
 			</PageRoute>
 			<PageRoute path='/nurse/visit/:id'>
 				<VisitsProvider />
