@@ -11,12 +11,6 @@ import ProviderVisitAddTest from './features/ProviderVisitItem/ProviderVisitAddT
 export default function Routes() {
 	return (
 		<Switch>
-			<PageRoute path='/test'>
-				<ProviderVisitAddTest />
-			</PageRoute>
-			<PageRoute path='/medication'>
-				<ProviderVisitAddMedication />
-			</PageRoute>
 			<PageRoute path='/provider/visit/:id'>
 				<ProviderVisitItem />
 			</PageRoute>

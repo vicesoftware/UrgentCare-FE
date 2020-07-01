@@ -4,68 +4,66 @@ import Icons from '../../assets/icons'
 import classNames from 'classnames'
 
 const ProviderVisitItemCardInProgress = () => {
+	const providerOrderStatus = (status) => {
+		switch (status) {
+			case 'Negative':
+				return 'outline-danger'
+			case 'Incomplete':
+				return 'outline-warning'
+			default:
+				return 'outline-success'
+		}
+	}
 	const patientDiagnosisData = [
 		{
 			eventKey: '0',
+			type: 'test',
 			title: 'Step Test',
-			statusBtnText: 'Complete',
-			providerOrders: 'Provider Orders',
+			providerstatus: 'Complete',
 			providerOrderDescripition:
 				'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident',
-			documentAdministration: 'Please Provide Administration Documentation:',
 			documentAdministrationContent: '',
-			actionBtnText: 'Complete Order',
 		},
 		{
 			eventKey: '1',
 			title: 'Perform Covid Test',
-			statusBtnText: 'Negative',
-			providerOrders: 'Provider Orders',
+			type: 'test',
+			providerstatus: 'Negative',
 			providerOrderDescripition:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-			documentAdministration: 'Document Administration',
 			documentAdministrationContent:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-			followUpInstruction: 'Follow-up Instructions',
 			followUpInstructionContent:
 				'The following instructions will be appended to your provider note',
-			actionBtnText: 'Save',
 		},
 		{
 			eventKey: '2',
+			type: 'medication',
 			title: 'Perscribed: Tylenol, 650 mg',
-			statusBtnText: 'Complete',
-			providerOrders: 'Provider Orders',
+			providerstatus: 'Complete',
 			providerOrderDescripition:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-			documentAdministration: 'Document Administration',
 			documentAdministrationContent:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-			actionBtnText: 'Edit note',
 		},
 		{
 			eventKey: '3',
+			type: 'medication',
 			title: 'Perscribed: Tylenol, 650 mg',
-			statusBtnText: 'InComplete',
-			providerOrders: 'Provider Orders',
+			providerstatus: 'InComplete',
 			providerOrderDescripition:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-			documentAdministration: 'Document Administration',
 			documentAdministrationContent:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-			actionBtnText: 'Edit note',
 		},
 		{
 			eventKey: '4',
+			type: 'medication',
 			title: 'Perscribed: Erythromycin, 333 mg',
-			statusBtnText: 'Incomplete',
-			providerOrders: 'Provider Orders',
+			providerstatus: 'Incomplete',
 			providerOrderDescripition:
 				'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.',
-			documentAdministration: 'Please Provide Document Administration',
 			documentAdministrationContent: '',
-			actionBtnText: 'Edit note',
-			BtnText: 'Remove Now',
 		},
 	]
 
@@ -94,18 +92,14 @@ const ProviderVisitItemCardInProgress = () => {
 									{each.title}
 								</h4>
 								<Button
-									variant={
-										each.statusBtnText === 'Negative'
-											? 'outline-danger'
-											: 'outline-success'
-									}
+									variant={providerOrderStatus(each.providerstatus)}
 									className='f-14 font-weight-bold btn-sm ml-md-auto mr-20'
 								>
-									{each.statusBtnText}
+									{each.providerstatus}
 								</Button>
 							</Col>
 							<Accordion.Toggle
-								className='btn-expand f-14 btn btn-link btn-auto p-0 font-weight-bold d-flex align-items-center text-light'
+								className='btn-expand f-14 btn-auto p-0 font-weight-bold d-flex align-items-center text-light'
 								variant='link'
 								eventKey={each.eventKey}
 							>
@@ -119,85 +113,55 @@ const ProviderVisitItemCardInProgress = () => {
 							</Accordion.Toggle>
 							<Accordion.Collapse eventKey={each.eventKey} className='col-12'>
 								<Card.Body className='p-0'>
-									<div className=''>
-										<div>
-											<h4 className='text-light f-14 font-weight-bold lh-25 mb-2'>
-												{each.providerOrders}
-											</h4>
-											<p className='f-14 mb-0'>
-												{each.providerOrderDescripition}
-											</p>
-										</div>
+									<h4 className='text-light f-14 font-weight-bold lh-25 mb-2'>
+										Provider Orders
+									</h4>
+									<p className='f-14 mb-0'>{each.providerOrderDescripition}</p>
 
+									<hr className='my-25' />
+
+									<h4 className='text-light f-14 font-weight-bold lh-25 mb-10'>
+										{each.documentAdministrationContent !== ''
+											? 'Document Administration'
+											: 'Please Provide Document Administration'}
+									</h4>
+									<p className='f-14 mb-20'>
+										{each.documentAdministrationContent}
+									</p>
+
+									{each.followUpInstructionContent ? (
 										<hr className='my-25' />
-
-										<div>
+									) : (
+										''
+									)}
+									{each.followUpInstructionContent ? (
+										<>
 											<h4 className='text-light f-14 font-weight-bold lh-25 mb-10'>
-												{each.documentAdministration}
+												Follow-up Instructions
 											</h4>
 											<p className='f-14 mb-20'>
-												{each.documentAdministrationContent}
+												{each.followUpInstructionContent}
 											</p>
-										</div>
 
-										{each.followUpInstruction ? <hr className='my-25' /> : ''}
-
-										<div>
-											{each.followUpInstruction ? (
-												<>
-													<h4 className='text-light f-14 font-weight-bold lh-25 mb-10'>
-														{each.followUpInstruction}
-													</h4>
-													<p className='f-14 mb-20'>
-														{each.followUpInstructionContent}
-													</p>
-
-													<textarea
-														className='form-control mb-20'
-														id=''
-														cols='30'
-														rows='4'
-														placeholder='Your Instructions…'
-													></textarea>
-												</>
-											) : (
-												''
-											)}
-											<Button
-												className={classNames({
-													'btn-primary-custom':
-														each.actionBtnText === 'Edit note',
-												})}
-												variant={
-													each.actionBtnText === 'Save'
-														? 'warning'
-														: each.actionBtnText === 'Edit note'
-														? 'primary'
-														: 'danger'
-												}
-											>
-												{each.actionBtnText}
-											</Button>{' '}
-											{each.BtnText ? (
-												<Button
-													className={classNames({
-														'btn-primary-custom': each.BtnText === 'Edit note',
-													})}
-													variant={
-														each.BtnText === 'Save'
-															? 'warning'
-															: each.BtnText === 'Edit note'
-															? 'primary'
-															: 'danger'
-													}
-												>
-													{each.BtnText}
-												</Button>
-											) : (
-												''
-											)}
-										</div>
-									</div>
+											<textarea
+												className='form-control mb-20'
+												id=''
+												cols='30'
+												rows='4'
+												placeholder='Your Instructions…'
+											></textarea>
+										</>
+									) : (
+										''
+									)}
+									{each.type === 'medication' ? (
+										<>
+											<Button variant='warning'>Edit Order</Button>{' '}
+											<Button variant='danger'>Remove Order</Button>
+										</>
+									) : (
+										<Button variant='warning'>Save</Button>
+									)}
 								</Card.Body>
 							</Accordion.Collapse>
 						</Row>

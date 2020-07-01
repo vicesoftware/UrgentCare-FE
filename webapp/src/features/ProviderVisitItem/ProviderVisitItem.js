@@ -6,7 +6,7 @@ import ProviderVisitItemRightPanel from './ProviderVisitItemRightPanel'
 import ProviderVisitItemCenterPanelComplete from './ProviderVisitItemCenterPanelComplete'
 import { PROVIDER_VISIT_ITEM_STATUS } from './providerVisitItem.constants'
 const ProviderVisitItem = () => {
-	const status = PROVIDER_VISIT_ITEM_STATUS.STATUS_IN_PROGRESS
+	const status = PROVIDER_VISIT_ITEM_STATUS.STATUS_COMPLETE
 	return (
 		<div className='container-fluid'>
 			<Row>
